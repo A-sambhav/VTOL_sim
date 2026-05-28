@@ -1,0 +1,31 @@
+running egg_info
+creating ../../build/vtol_testbench/vtol_testbench.egg-info
+writing ../../build/vtol_testbench/vtol_testbench.egg-info/PKG-INFO
+writing dependency_links to ../../build/vtol_testbench/vtol_testbench.egg-info/dependency_links.txt
+writing entry points to ../../build/vtol_testbench/vtol_testbench.egg-info/entry_points.txt
+writing requirements to ../../build/vtol_testbench/vtol_testbench.egg-info/requires.txt
+writing top-level names to ../../build/vtol_testbench/vtol_testbench.egg-info/top_level.txt
+writing manifest file '../../build/vtol_testbench/vtol_testbench.egg-info/SOURCES.txt'
+reading manifest file '../../build/vtol_testbench/vtol_testbench.egg-info/SOURCES.txt'
+writing manifest file '../../build/vtol_testbench/vtol_testbench.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/asambhav/vtol_ws/build/vtol_testbench/build/lib/vtol_testbench
+copying vtol_testbench/__init__.py -> /home/asambhav/vtol_ws/build/vtol_testbench/build/lib/vtol_testbench
+copying vtol_testbench/manual_input.py -> /home/asambhav/vtol_ws/build/vtol_testbench/build/lib/vtol_testbench
+running install
+running install_lib
+creating /home/asambhav/vtol_ws/install/vtol_testbench/lib/python3.10/site-packages/vtol_testbench
+copying /home/asambhav/vtol_ws/build/vtol_testbench/build/lib/vtol_testbench/__init__.py -> /home/asambhav/vtol_ws/install/vtol_testbench/lib/python3.10/site-packages/vtol_testbench
+copying /home/asambhav/vtol_ws/build/vtol_testbench/build/lib/vtol_testbench/manual_input.py -> /home/asambhav/vtol_ws/install/vtol_testbench/lib/python3.10/site-packages/vtol_testbench
+byte-compiling /home/asambhav/vtol_ws/install/vtol_testbench/lib/python3.10/site-packages/vtol_testbench/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/asambhav/vtol_ws/install/vtol_testbench/lib/python3.10/site-packages/vtol_testbench/manual_input.py to manual_input.cpython-310.pyc
+running install_data
+creating /home/asambhav/vtol_ws/install/vtol_testbench/share/ament_index/resource_index/packages
+copying resource/vtol_testbench -> /home/asambhav/vtol_ws/install/vtol_testbench/share/ament_index/resource_index/packages
+copying package.xml -> /home/asambhav/vtol_ws/install/vtol_testbench/share/vtol_testbench
+running install_egg_info
+Copying ../../build/vtol_testbench/vtol_testbench.egg-info to /home/asambhav/vtol_ws/install/vtol_testbench/lib/python3.10/site-packages/vtol_testbench-0.0.0-py3.10.egg-info
+running install_scripts
+Installing manual_input script to /home/asambhav/vtol_ws/install/vtol_testbench/lib/vtol_testbench
+writing list of installed files to '/home/asambhav/vtol_ws/build/vtol_testbench/install.log'

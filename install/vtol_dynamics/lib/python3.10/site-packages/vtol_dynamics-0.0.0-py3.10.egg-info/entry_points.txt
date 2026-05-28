@@ -1,0 +1,2 @@
+[console_scripts]
+vtol_dynamics_node = vtol_dynamics.vtol_dynamics_node:main

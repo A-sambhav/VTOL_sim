@@ -1,0 +1,25 @@
+running egg_info
+writing ../../build/vtol_dynamics/vtol_dynamics.egg-info/PKG-INFO
+writing dependency_links to ../../build/vtol_dynamics/vtol_dynamics.egg-info/dependency_links.txt
+writing entry points to ../../build/vtol_dynamics/vtol_dynamics.egg-info/entry_points.txt
+writing requirements to ../../build/vtol_dynamics/vtol_dynamics.egg-info/requires.txt
+writing top-level names to ../../build/vtol_dynamics/vtol_dynamics.egg-info/top_level.txt
+reading manifest file '../../build/vtol_dynamics/vtol_dynamics.egg-info/SOURCES.txt'
+writing manifest file '../../build/vtol_dynamics/vtol_dynamics.egg-info/SOURCES.txt'
+running build
+running build_py
+copying vtol_dynamics/vtol_dynamics_node.py -> /home/asambhav/vtol_ws/build/vtol_dynamics/build/lib/vtol_dynamics
+copying vtol_dynamics/__init__.py -> /home/asambhav/vtol_ws/build/vtol_dynamics/build/lib/vtol_dynamics
+running install
+running install_lib
+copying /home/asambhav/vtol_ws/build/vtol_dynamics/build/lib/vtol_dynamics/vtol_dynamics_node.py -> /home/asambhav/vtol_ws/install/vtol_dynamics/lib/python3.10/site-packages/vtol_dynamics
+byte-compiling /home/asambhav/vtol_ws/install/vtol_dynamics/lib/python3.10/site-packages/vtol_dynamics/vtol_dynamics_node.py to vtol_dynamics_node.cpython-310.pyc
+running install_data
+copying resource/vtol_dynamics -> /home/asambhav/vtol_ws/install/vtol_dynamics/share/ament_index/resource_index/packages
+copying package.xml -> /home/asambhav/vtol_ws/install/vtol_dynamics/share/vtol_dynamics
+running install_egg_info
+removing '/home/asambhav/vtol_ws/install/vtol_dynamics/lib/python3.10/site-packages/vtol_dynamics-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/vtol_dynamics/vtol_dynamics.egg-info to /home/asambhav/vtol_ws/install/vtol_dynamics/lib/python3.10/site-packages/vtol_dynamics-0.0.0-py3.10.egg-info
+running install_scripts
+Installing vtol_dynamics_node script to /home/asambhav/vtol_ws/install/vtol_dynamics/lib/vtol_dynamics
+writing list of installed files to '/home/asambhav/vtol_ws/build/vtol_dynamics/install.log'

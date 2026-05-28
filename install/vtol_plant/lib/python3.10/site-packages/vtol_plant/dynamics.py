@@ -1,0 +1,423 @@
+# ==========================================================
+#                     IMPORTS
+# ==========================================================
+
+import numpy as np
+
+import math
+
+from vtol_plant.allocator import ControlAllocator
+
+
+# ==========================================================
+#                   VTOL DYNAMICS
+# ==========================================================
+
+class VTOLDynamics:
+
+    def __init__(self, params):
+
+        # ==================================================
+        #                  PARAMETERS
+        # ==================================================
+
+        self.params = params
+
+        # ==================================================
+        #                 ALLOCATOR
+        # ==================================================
+
+        self.allocator = ControlAllocator(
+
+            self.params
+
+        )
+
+    # ======================================================
+    #                STATE DERIVATIVE
+    # ======================================================
+    #
+    # X =
+    #
+    # [u,v,w,p,q,r,x,y,z,phi,theta,psi]
+    #
+    # U =
+    #
+    # [U1,U2,U3,U4]
+    #
+    # ======================================================
+
+    def state_derivative(
+
+        self,
+        X,
+        U
+
+    ):
+
+        # ==================================================
+        #                 EXTRACT STATES
+        # ==================================================
+
+        u = X[0]
+        v = X[1]
+        w = X[2]
+
+        p = X[3]
+        q = X[4]
+        r = X[5]
+
+        x = X[6]
+        y = X[7]
+        z = X[8]
+
+        phi = X[9]
+        theta = X[10]
+        psi = X[11]
+
+        # ==================================================
+        #              EXTRACT CONTROL INPUTS
+        # ==================================================
+
+        U1 = U[0]
+
+        U2 = U[1]
+
+        U3 = U[2]
+
+        U4 = U[3]
+
+        # ==================================================
+        #            COMPUTE MOTOR VELOCITIES
+        # ==================================================
+
+        omega = self.allocator.allocate(
+
+            U1,
+            U2,
+            U3,
+            U4
+
+        )
+
+        omega1 = omega[0]
+
+        omega2 = omega[1]
+
+        omega3 = omega[2]
+
+        omega4 = omega[3]
+
+        # ==================================================
+        #         TOTAL PROPELLER ANGULAR SPEED
+        # ==================================================
+        #
+        # CW  : Motor 1, 3
+        # CCW : Motor 2, 4
+        #
+        # ==================================================
+
+        Omega = (
+
+            -omega1
+            + omega2
+            - omega3
+            + omega4
+
+        )
+
+        # ==================================================
+        #           TRANSLATIONAL DYNAMICS
+        # ==================================================
+
+        u_dot = (
+
+            (v * r)
+
+            - (w * q)
+
+            + self.params.gravity
+            * math.sin(theta)
+
+        )
+
+        v_dot = (
+
+            (w * p)
+
+            - (u * r)
+
+            - self.params.gravity
+            * math.cos(theta)
+            * math.sin(phi)
+
+        )
+
+        w_dot = (
+
+            (u * q)
+
+            - (v * p)
+
+            - self.params.gravity
+            * math.cos(theta)
+            * math.cos(phi)
+
+            + (U1 / self.params.mass)
+
+        )
+
+        # ==================================================
+        #             ROTATIONAL DYNAMICS
+        # ==================================================
+
+        p_dot = (
+
+            (
+
+                (self.params.Iyy - self.params.Izz)
+
+                / self.params.Ixx
+
+            )
+
+            * q * r
+
+            - (
+
+                self.params.JTP
+                / self.params.Ixx
+
+            )
+
+            * q * Omega
+
+            + (
+
+                U2
+                / self.params.Ixx
+
+            )
+
+        )
+
+        q_dot = (
+
+            (
+
+                (self.params.Izz - self.params.Ixx)
+
+                / self.params.Iyy
+
+            )
+
+            * p * r
+
+            + (
+
+                self.params.JTP
+                / self.params.Iyy
+
+            )
+
+            * p * Omega
+
+            + (
+
+                U3
+                / self.params.Iyy
+
+            )
+
+        )
+
+        r_dot = (
+
+            (
+
+                (self.params.Ixx - self.params.Iyy)
+
+                / self.params.Izz
+
+            )
+
+            * p * q
+
+            + (
+
+                U4
+                / self.params.Izz
+
+            )
+
+        )
+
+        # ==================================================
+        #              EULER KINEMATICS
+        # ==================================================
+
+        phi_dot = (
+
+            p
+
+            + q * math.sin(phi)
+            * math.tan(theta)
+
+            + r * math.cos(phi)
+            * math.tan(theta)
+
+        )
+
+        theta_dot = (
+
+            q * math.cos(phi)
+
+            - r * math.sin(phi)
+
+        )
+
+        psi_dot = (
+
+            (
+
+                q * math.sin(phi)
+
+                + r * math.cos(phi)
+
+            )
+
+            / math.cos(theta)
+
+        )
+
+        # ==================================================
+        #          BODY TO INERTIAL TRANSFORM
+        # ==================================================
+
+        x_dot = (
+
+            (
+
+                math.cos(theta)
+                * math.cos(psi)
+
+            ) * u
+
+            +
+
+            (
+
+                math.sin(phi)
+                * math.sin(theta)
+                * math.cos(psi)
+
+                - math.cos(phi)
+                * math.sin(psi)
+
+            ) * v
+
+            +
+
+            (
+
+                math.cos(phi)
+                * math.sin(theta)
+                * math.cos(psi)
+
+                + math.sin(phi)
+                * math.sin(psi)
+
+            ) * w
+
+        )
+
+        y_dot = (
+
+            (
+
+                math.cos(theta)
+                * math.sin(psi)
+
+            ) * u
+
+            +
+
+            (
+
+                math.sin(phi)
+                * math.sin(theta)
+                * math.sin(psi)
+
+                + math.cos(phi)
+                * math.cos(psi)
+
+            ) * v
+
+            +
+
+            (
+
+                math.cos(phi)
+                * math.sin(theta)
+                * math.sin(psi)
+
+                - math.sin(phi)
+                * math.cos(psi)
+
+            ) * w
+
+        )
+
+        z_dot = (
+
+            (
+
+                -math.sin(theta)
+
+            ) * u
+
+            +
+
+            (
+
+                math.sin(phi)
+                * math.cos(theta)
+
+            ) * v
+
+            +
+
+            (
+
+                math.cos(phi)
+                * math.cos(theta)
+
+            ) * w
+
+        )
+
+        # ==================================================
+        #             RETURN STATE DERIVATIVE
+        # ==================================================
+
+        X_dot = np.array([
+
+            u_dot,
+            v_dot,
+            w_dot,
+
+            p_dot,
+            q_dot,
+            r_dot,
+
+            x_dot,
+            y_dot,
+            z_dot,
+
+            phi_dot,
+            theta_dot,
+            psi_dot
+
+        ])
+
+        return X_dot

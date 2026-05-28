@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: vtol_plant
+Version: 0.0.1
+Summary: Nonlinear VTOL UAV Plant Model
+Maintainer: asambhav
+Maintainer-email: sambhava06@gmail.com
+License: Apache-2.0
+Requires-Dist: setuptools
+Requires-Dist: numpy
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-dist
+Dynamic: summary

@@ -1,0 +1,3 @@
+[console_scripts]
+plant_node = vtol_plant.plant_node:main
+state_visualizer = vtol_plant.state_visualizer:main

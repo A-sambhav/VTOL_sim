@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<?xml-model
+    href="http://download.ros.org/schema/package_format3.xsd"
+    schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<package format="3">
+
+  <!-- ==================================================== -->
+  <!--                     PACKAGE                           -->
+  <!-- ==================================================== -->
+
+  <name>vtol_gazebo_plugins</name>
+
+  <version>0.0.0</version>
+
+  <description>
+
+    Custom Ignition Gazebo plugins for VTOL simulation
+
+  </description>
+
+  <!-- ==================================================== -->
+  <!--                    MAINTAINER                         -->
+  <!-- ==================================================== -->
+
+  <maintainer email="sambhava06@gmail.com">
+
+    asambhav
+
+  </maintainer>
+
+  <!-- ==================================================== -->
+  <!--                      LICENSE                          -->
+  <!-- ==================================================== -->
+
+  <license>Apache-2.0</license>
+
+  <!-- ==================================================== -->
+  <!--                   BUILD TOOL                          -->
+  <!-- ==================================================== -->
+
+  <buildtool_depend>
+
+    ament_cmake
+
+  </buildtool_depend>
+
+  <!-- ==================================================== -->
+  <!--             IGNITION GAZEBO DEPENDENCIES             -->
+  <!-- ==================================================== -->
+
+  <depend>ignition-gazebo6</depend>
+
+  <depend>ignition-plugin1</depend>
+
+  <depend>ignition-common4</depend>
+
+  <depend>ignition-math6</depend>
+
+  <!-- ==================================================== -->
+  <!--                     TESTING                           -->
+  <!-- ==================================================== -->
+
+  <test_depend>ament_lint_auto</test_depend>
+
+  <test_depend>ament_lint_common</test_depend>
+
+  <!-- ==================================================== -->
+  <!--                      EXPORT                           -->
+  <!-- ==================================================== -->
+
+  <export>
+
+    <build_type>ament_cmake</build_type>
+
+  </export>
+
+</package>

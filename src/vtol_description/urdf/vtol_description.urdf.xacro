@@ -1,0 +1,525 @@
+<?xml version="1.0"?>
+
+<robot name="vtol"
+       xmlns:xacro="http://www.ros.org/wiki/xacro">
+<!--default parameters-->
+<xacro:arg name="is_sim" default="true"/>
+<xacro:arg name="is_ignition" default="true"/>
+
+
+<xacro:include filename="$(find vtol_description)/urdf/vtol_gazebo.xacro"/>
+<xacro:include filename="$(find vtol_description)/urdf/vtol_controller.xacro"/>
+
+
+  <!-- ========================================================= -->
+  <!--                       PROPERTIES                           -->
+  <!-- ========================================================= -->
+
+  <xacro:property name="mesh_path"
+                  value="package://vtol_description/meshes"/>
+  <!-- ====================================================== -->
+  <!--                      BASE LINK                         -->
+  <!-- ====================================================== -->
+
+<link name="base_link">
+
+  <inertial>
+
+    <origin xyz="0 0 0"
+            rpy="0 0 0"/>
+
+    <mass value="0.001"/>
+
+    <inertia
+        ixx="0.0001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.0001"
+        iyz="0.0"
+        izz="0.0001"/>
+
+  </inertial>
+
+</link>
+  <!-- ====================================================== -->
+<!--                  BASE TO BODY JOINT                    -->
+<!-- ====================================================== -->
+
+<joint name="base_joint"
+       type="fixed">
+
+  <parent link="base_link"/>
+
+  <child link="body"/>
+
+  <!-- Adjust later if needed -->
+
+  <origin xyz="0 0 0"
+          rpy="0 0 0"/>
+
+</joint>
+
+  <!-- ========================================================= -->
+  <!--                         BODY                               -->
+  <!-- ========================================================= -->
+
+  <link name="body">
+
+    <inertial>
+      <origin xyz="-0.0771716175377545 4.61092762121945E-05 -0.0445609630865015"
+              rpy="0 0 0"/>
+      <mass value="2.5068734355408"/>
+
+      <inertia
+          ixx="1.72604787866449"
+          ixy="5.71985943900391E-05"
+          ixz="0.00332894276882996"
+          iyy="0.446451518761635"
+          iyz="-9.62869705567667E-06"
+          izz="2.15937770055123"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0"
+              rpy="0 0 0"/>
+
+      <geometry>
+        <mesh filename="${mesh_path}/body.STL"/>
+      </geometry>
+
+      <material name="body_color">
+        <color rgba="0.67843137254902 0.67843137254902 0.67843137254902 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0"
+              rpy="0 0 0"/>
+
+      <geometry>
+        <mesh filename="${mesh_path}/body.STL"/>
+        <!--box size="1.2 0.8 0.2"/-->
+      </geometry>
+    </collision>
+
+  </link>
+<!-- ====================================================== -->
+<!--                        IMU LINK                        -->
+<!-- ====================================================== -->
+
+<link name="imu_link">
+
+  <inertial>
+    <origin xyz="0 0 0"
+            rpy="0 0 0"/>
+
+    <mass value="0.01"/>
+
+    <inertia
+        ixx="0.0001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.0001"
+        iyz="0.0"
+        izz="0.0001"/>
+  </inertial>
+
+</link>
+
+<!-- ====================================================== -->
+<!--                     IMU JOINT                          -->
+<!-- ====================================================== -->
+
+<joint name="imu_joint"
+       type="fixed">
+
+  <parent link="body"/>
+
+  <child link="imu_link"/>
+
+  <!-- Adjust placement later -->
+  <origin xyz="0 0 0"
+          rpy="0 0 0"/>
+
+</joint>
+  <!-- ========================================================= -->
+  <!--                 FIXED WING PROPELLER                       -->
+  <!-- ========================================================= -->
+
+  <link name="fixed_wing_propeller">
+
+    <inertial>
+      <origin xyz="-0.0035275247671025 5.86801685005522E-06 -1.36930748596761E-05"
+              rpy="0 0 0"/>
+
+      <mass value="0.00208379179546828"/>
+
+      <inertia
+          ixx="2.50154563262643E-06"
+          ixy="-5.10577250212832E-10"
+          ixz="2.10474954162855E-09"
+          iyy="2.3476784475337E-06"
+          iyz="5.6042470109356E-07"
+          izz="1.65436430056591E-07"/>
+    </inertial>
+
+    <visual>
+      <geometry>
+        <mesh filename="${mesh_path}/fixed_wing_propeller.STL"/>
+      </geometry>
+
+      <material name="prop_color">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <geometry>
+        <mesh filename="${mesh_path}/fixed_wing_propeller.STL"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+  <joint name="fixed_wing_propeller_joint"
+         type="continuous">
+
+    <origin xyz="-0.71275 0 -0.035635"
+            rpy="0 0 0"/>
+
+    <parent link="body"/>
+    <child  link="fixed_wing_propeller"/>
+
+    <axis xyz="1 0 0.00088052"/>
+
+  </joint>
+
+  <!-- ========================================================= -->
+  <!--                    RACK N PINION 1                         -->
+  <!-- ========================================================= -->
+
+  <link name="rack_n_pinion1">
+
+    <inertial>
+      <origin xyz="0.0417964514343933 -0.0246499989136419 -8.01493604147409E-06"
+              rpy="0 0 0"/>
+
+      <mass value="0.016007870497947"/>
+
+      <inertia
+          ixx="4.50006666097273E-06"
+          ixy="-1.93274658085327E-14"
+          ixz="2.81804039743377E-10"
+          iyy="2.86065229941664E-06"
+          iyz="4.52990523685554E-10"
+          izz="5.96852939737291E-06"/>
+    </inertial>
+
+    <visual>
+      <geometry>
+        <mesh filename="${mesh_path}/rack_n_pinion1.STL"/>
+      </geometry>
+
+      <material name="rack_color">
+        <color rgba="0.627450980392157 0.627450980392157 0.627450980392157 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <geometry>
+        <mesh filename="${mesh_path}/rack_n_pinion1.STL"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+  <joint name="rack_n_pinion1_joint"
+         type="revolute">
+
+    <origin xyz="0.21457 -0.25135 -0.069903"
+            rpy="0 0 0"/>
+
+    <parent link="body"/>
+    <child  link="rack_n_pinion1"/>
+
+    <axis xyz="0 -1 0"/>
+
+    <limit lower="-3.14"
+           upper="3.14"
+           effort="10"
+           velocity="1"/>
+
+    <dynamics damping="50.0"
+            friction="1.0"/>
+
+  </joint>
+
+  <!-- ========================================================= -->
+  <!--                         MOTOR 1                            -->
+  <!-- ========================================================= -->
+
+  <link name="motor1">
+
+    <inertial>
+      <origin xyz="0.00352633984706498 -1.91435672497464E-06 -1.5136865854858E-06"
+              rpy="0 0 0"/>
+
+      <mass value="0.00208470409008693"/>
+
+      <inertia
+          ixx="2.50225959622408E-06"
+          ixy="-1.33707289868701E-10"
+          ixz="-4.49181168827716E-11"
+          iyy="2.49849705916855E-07"
+          iyz="-7.0092100620004E-07"
+          izz="2.26398092244608E-06"/>
+    </inertial>
+
+    <visual>
+      <geometry>
+        <mesh filename="${mesh_path}/motor1.STL"/>
+      </geometry>
+
+      <material name="motor_color">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <geometry>
+        <mesh filename="${mesh_path}/motor1.STL"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+  <joint name="motor1_joint"
+         type="continuous">
+
+    <origin xyz="0.0761 -0.02465 -1.4588E-05"
+            rpy="0 0 0"/>
+
+    <parent link="rack_n_pinion1"/>
+    <child  link="motor1"/>
+
+    <axis xyz="1 0 -0.00019169"/>
+
+  </joint>
+
+  <!-- ========================================================= -->
+  <!--                    RACK N PINION 2                         -->
+  <!-- ========================================================= -->
+
+  <link name="rack_n_pinion2">
+
+    <inertial>
+      <origin xyz="0.0452234045069935 0.0246499997205101 0.000780703148912036"
+              rpy="0 0 0"/>
+
+      <mass value="0.0147926126734086"/>
+
+      <inertia
+          ixx="4.46925020189665E-06"
+          ixy="4.77270672438172E-13"
+          ixz="-2.53403975549222E-08"
+          iyy="2.79947520987487E-06"
+          iyz="-2.66887485338537E-11"
+          izz="5.93670540614452E-06"/>
+    </inertial>
+
+    <visual>
+      <geometry>
+        <mesh filename="${mesh_path}/rack_n_pinion2.STL"/>
+      </geometry>
+
+      <material name="rack_color2">
+        <color rgba="0.627450980392157 0.627450980392157 0.627450980392157 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <geometry>
+        <mesh filename="${mesh_path}/rack_n_pinion2.STL"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+  <joint name="rack_n_pinion2_joint"
+         type="revolute">
+
+    <origin xyz="0.21466 0.25135 -0.064308"
+            rpy="0 0 0"/>
+
+    <parent link="body"/>
+    <child  link="rack_n_pinion2"/>
+
+    <axis xyz="0 1 0"/>
+
+    <limit lower="-3.14"
+           upper="3.14"
+           effort="10"
+           velocity="1"/>
+
+    <dynamics damping="50.0"
+            friction="1.0"/>
+
+  </joint>
+
+  <!-- ========================================================= -->
+  <!--                         MOTOR 2                            -->
+  <!-- ========================================================= -->
+
+  <link name="motor2">
+
+    <inertial>
+      <origin xyz="0.00352691599892315 -1.27843136926431E-05 6.39032525051389E-05"
+              rpy="0 0 0"/>
+
+      <mass value="0.00208387092459596"/>
+
+      <inertia
+          ixx="2.5016435232618E-06"
+          ixy="4.56039210826312E-11"
+          ixz="3.22036094878859E-10"
+          iyy="2.99402351580913E-08"
+          iyz="-5.65837583783968E-09"
+          izz="2.48328059466003E-06"/>
+    </inertial>
+
+    <visual>
+      <geometry>
+        <mesh filename="${mesh_path}/motor2.STL"/>
+      </geometry>
+
+      <material name="motor_color2">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <geometry>
+        <mesh filename="${mesh_path}/motor2.STL"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+  <joint name="motor2_joint"
+         type="continuous">
+
+    <origin xyz="0.076089 0.02465 0.0013135"
+            rpy="0 0 0"/>
+
+    <parent link="rack_n_pinion2"/>
+    <child  link="motor2"/>
+
+    <axis xyz="0.99985 0 0.017261"/>
+
+  </joint>
+
+  <!-- ========================================================= -->
+  <!--                         MOTOR 3                            -->
+  <!-- ========================================================= -->
+
+  <link name="motor3">
+
+    <inertial>
+      <origin xyz="3.52768563072203E-06 1.20944666829881E-05 0.00352751557035019"
+              rpy="0 0 0"/>
+
+      <mass value="0.00208389476248307"/>
+
+      <inertia
+          ixx="2.48243274998717E-06"
+          ixy="4.43937085490153E-08"
+          ixz="7.78553695281725E-12"
+          iyy="3.07307113143672E-08"
+          iyz="4.20329773442998E-11"
+          izz="2.50159768651061E-06"/>
+    </inertial>
+
+    <visual>
+      <geometry>
+        <mesh filename="${mesh_path}/motor3.STL"/>
+      </geometry>
+
+      <material name="motor_color3">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <geometry>
+        <mesh filename="${mesh_path}/motor3.STL"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+  <joint name="motor3_joint"
+         type="continuous">
+
+    <origin xyz="-0.31259 -0.2765 -0.023702"
+            rpy="0 0 0"/>
+
+    <parent link="body"/>
+    <child  link="motor3"/>
+
+    <axis xyz="-0.00019169 0 -1"/>
+
+  </joint>
+
+  <!-- ========================================================= -->
+  <!--                         MOTOR 4                            -->
+  <!-- ========================================================= -->
+
+  <link name="motor4">
+
+    <inertial>
+      <origin xyz="-5.79773208092549E-05 1.2168738439039E-05 0.00352706336740313"
+              rpy="0 0 0"/>
+
+      <mass value="0.00208391383900287"/>
+
+      <inertia
+          ixx="2.48243882359052E-06"
+          ixy="4.43891040841067E-08"
+          ixz="-3.26390079387164E-10"
+          iyy="3.07301722903301E-08"
+          iyz="8.17730604920072E-10"
+          izz="2.50159233909783E-06"/>
+    </inertial>
+
+    <visual>
+      <geometry>
+        <mesh filename="${mesh_path}/motor4.STL"/>
+      </geometry>
+
+      <material name="motor_color4">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <geometry>
+        <mesh filename="${mesh_path}/motor4.STL"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+  <joint name="motor4_joint"
+         type="continuous">
+
+    <origin xyz="-0.31322 0.276 -0.027814"
+            rpy="0 0 0"/>
+
+    <parent link="body"/>
+    <child  link="motor4"/>
+
+    <axis xyz="-0.017261 0 0.99985"/>
+
+  </joint>
+
+</robot>

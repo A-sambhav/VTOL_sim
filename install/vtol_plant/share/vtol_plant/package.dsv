@@ -1,0 +1,6 @@
+source;share/vtol_plant/hook/pythonpath.ps1
+source;share/vtol_plant/hook/pythonpath.dsv
+source;share/vtol_plant/hook/pythonpath.sh
+source;share/vtol_plant/hook/ament_prefix_path.ps1
+source;share/vtol_plant/hook/ament_prefix_path.dsv
+source;share/vtol_plant/hook/ament_prefix_path.sh

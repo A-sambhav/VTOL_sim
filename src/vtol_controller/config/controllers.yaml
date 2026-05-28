@@ -1,0 +1,46 @@
+controller_manager:
+  ros__parameters:
+
+    update_rate: 100
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    motor_velocity_controller:
+      type: velocity_controllers/JointGroupVelocityController
+
+    tilt_position_controller:
+      type: position_controllers/JointGroupPositionController
+
+
+motor_velocity_controller:
+  ros__parameters:
+
+    joints:
+      - motor1_joint
+      - motor2_joint
+      - motor3_joint
+      - motor4_joint
+      - fixed_wing_propeller_joint
+
+    command_interfaces:
+      - velocity
+
+    state_interfaces:
+      - position
+      - velocity
+
+
+tilt_position_controller:
+  ros__parameters:
+
+    joints:
+      - rack_n_pinion1_joint
+      - rack_n_pinion2_joint
+
+    command_interfaces:
+      - position
+
+    state_interfaces:
+      - position
+      - velocity

@@ -1,0 +1,2 @@
+[console_scripts]
+thrust_allocator = vtol_controller.thrust_allocator:main

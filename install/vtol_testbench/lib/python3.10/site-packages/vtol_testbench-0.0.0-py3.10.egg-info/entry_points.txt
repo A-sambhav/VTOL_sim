@@ -1,0 +1,2 @@
+[console_scripts]
+manual_input = vtol_testbench.manual_input:main

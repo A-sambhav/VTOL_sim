@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
+       name="vtol">
+
+  <!-- ====================================================== -->
+  <!--                    ROS2 CONTROL                        -->
+  <!-- ====================================================== -->
+
+  <ros2_control name="VTOLSystem"
+                type="system">
+
+    <!-- ================================================== -->
+    <!--                SIMULATION HARDWARE                 -->
+    <!-- ================================================== -->
+
+    <xacro:if value="$(arg is_sim)">
+
+      <!-- ROS2 Humble -->
+
+      <xacro:if value="$(arg is_ignition)">
+
+        <hardware>
+          <plugin>ign_ros2_control/IgnitionSystem</plugin>
+        </hardware>
+
+      </xacro:if>
+
+      <!-- ROS2 Iron or Above -->
+
+      <xacro:unless value="$(arg is_ignition)">
+
+        <hardware>
+          <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+        </hardware>
+
+      </xacro:unless>
+
+    </xacro:if>
+
+    <!-- ================================================== -->
+    <!--                 REAL HARDWARE                      -->
+    <!-- ================================================== -->
+
+    <xacro:unless value="$(arg is_sim)">
+
+      <hardware>
+
+        <!-- Future STM32 / Flight Controller Plugin -->
+
+        <plugin>vtol_hardware/VTOLHardwareInterface</plugin>
+
+      </hardware>
+
+    </xacro:unless>
+
+    <!-- ================================================== -->
+    <!--                  MOTOR CONTROLLERS                 -->
+    <!-- ================================================== -->
+
+    <!-- Motor 1 -->
+
+    <joint name="motor1_joint">
+
+      <command_interface name="velocity">
+
+        <param name="min">-2000</param>
+        <param name="max">2000</param>
+
+      </command_interface>
+
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+
+    </joint>
+
+    <!-- Motor 2 -->
+
+    <joint name="motor2_joint">
+
+      <command_interface name="velocity">
+
+        <param name="min">-2000</param>
+        <param name="max">2000</param>
+
+      </command_interface>
+
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+
+    </joint>
+
+    <!-- Motor 3 -->
+
+    <joint name="motor3_joint">
+
+      <command_interface name="velocity">
+
+        <param name="min">-2000</param>
+        <param name="max">2000</param>
+
+      </command_interface>
+
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+
+    </joint>
+
+    <!-- Motor 4 -->
+
+    <joint name="motor4_joint">
+
+      <command_interface name="velocity">
+
+        <param name="min">-2000</param>
+        <param name="max">2000</param>
+
+      </command_interface>
+
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+
+    </joint>
+
+    <!-- Fixed Wing Propeller -->
+
+    <joint name="fixed_wing_propeller_joint">
+
+      <command_interface name="velocity">
+
+        <param name="min">-3000</param>
+        <param name="max">3000</param>
+
+      </command_interface>
+
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+
+    </joint>
+
+    <!-- ================================================== -->
+    <!--                TILT TRANSITION JOINTS              -->
+    <!-- ================================================== -->
+
+    <!-- Rack N Pinion 1 -->
+
+    <joint name="rack_n_pinion1_joint">
+
+      <command_interface name="position">
+
+        <!-- -90° to +90° -->
+
+        <param name="min">-1.57</param>
+        <param name="max">1.57</param>
+
+      </command_interface>
+
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+
+    </joint>
+
+    <!-- Rack N Pinion 2 -->
+
+    <joint name="rack_n_pinion2_joint">
+
+      <command_interface name="position">
+
+        <!-- -90° to +90° -->
+
+        <param name="min">-1.57</param>
+        <param name="max">1.57</param>
+
+      </command_interface>
+
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+
+    </joint>
+
+  </ros2_control>
+
+</robot>

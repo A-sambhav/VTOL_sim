@@ -1,0 +1,25 @@
+[1.084s] Invoking command in '/home/asambhav/vtol_ws/src/vtol_testbench': PYTHONPATH=/home/asambhav/vtol_ws/build/vtol_testbench/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/vtol_testbench/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_testbench build --build-base /home/asambhav/vtol_ws/build/vtol_testbench/build install --record /home/asambhav/vtol_ws/build/vtol_testbench/install.log --single-version-externally-managed install_data
+[1.248s] running egg_info
+[1.258s] writing ../../build/vtol_testbench/vtol_testbench.egg-info/PKG-INFO
+[1.258s] writing dependency_links to ../../build/vtol_testbench/vtol_testbench.egg-info/dependency_links.txt
+[1.259s] writing entry points to ../../build/vtol_testbench/vtol_testbench.egg-info/entry_points.txt
+[1.259s] writing requirements to ../../build/vtol_testbench/vtol_testbench.egg-info/requires.txt
+[1.259s] writing top-level names to ../../build/vtol_testbench/vtol_testbench.egg-info/top_level.txt
+[1.279s] reading manifest file '../../build/vtol_testbench/vtol_testbench.egg-info/SOURCES.txt'
+[1.281s] writing manifest file '../../build/vtol_testbench/vtol_testbench.egg-info/SOURCES.txt'
+[1.281s] running build
+[1.281s] running build_py
+[1.281s] copying vtol_testbench/__init__.py -> /home/asambhav/vtol_ws/build/vtol_testbench/build/lib/vtol_testbench
+[1.281s] copying vtol_testbench/manual_input.py -> /home/asambhav/vtol_ws/build/vtol_testbench/build/lib/vtol_testbench
+[1.282s] running install
+[1.286s] running install_lib
+[1.307s] running install_data
+[1.307s] copying resource/vtol_testbench -> /home/asambhav/vtol_ws/install/vtol_testbench/share/ament_index/resource_index/packages
+[1.307s] copying package.xml -> /home/asambhav/vtol_ws/install/vtol_testbench/share/vtol_testbench
+[1.307s] running install_egg_info
+[1.328s] removing '/home/asambhav/vtol_ws/install/vtol_testbench/lib/python3.10/site-packages/vtol_testbench-0.0.0-py3.10.egg-info' (and everything under it)
+[1.328s] Copying ../../build/vtol_testbench/vtol_testbench.egg-info to /home/asambhav/vtol_ws/install/vtol_testbench/lib/python3.10/site-packages/vtol_testbench-0.0.0-py3.10.egg-info
+[1.329s] running install_scripts
+[1.364s] Installing manual_input script to /home/asambhav/vtol_ws/install/vtol_testbench/lib/vtol_testbench
+[1.364s] writing list of installed files to '/home/asambhav/vtol_ws/build/vtol_testbench/install.log'
+[1.383s] Invoked command in '/home/asambhav/vtol_ws/src/vtol_testbench' returned '0': PYTHONPATH=/home/asambhav/vtol_ws/build/vtol_testbench/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/vtol_testbench/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_testbench build --build-base /home/asambhav/vtol_ws/build/vtol_testbench/build install --record /home/asambhav/vtol_ws/build/vtol_testbench/install.log --single-version-externally-managed install_data

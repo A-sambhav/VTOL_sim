@@ -1,0 +1,337 @@
+<?xml version="1.0"?>
+
+<robot name="vtol"
+       xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ====================================================== -->
+  <!--                    BODY PROPERTIES                     -->
+  <!-- ====================================================== -->
+
+  <gazebo reference="body">
+    <material>Gazebo/Gray</material>
+
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+
+    <gravity>false</gravity>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+  <!-- ====================================================== -->
+  <!--                 MOTOR THRUST PLUGINS                  -->
+  <!-- ====================================================== -->
+
+  <!-- MOTOR 1 -->
+
+  <gazebo reference="motor1">
+
+    <plugin
+        filename="libmulticopter_motor_model.so"
+        name="vtol::MulticopterMotorModel">
+
+      <joint_name>
+
+        motor1_joint
+
+      </joint_name>
+
+      <link_name>
+
+        motor1
+
+      </link_name>
+
+      <motor_constant>
+
+        0.0005
+
+      </motor_constant>
+
+    </plugin>
+
+  </gazebo>
+
+  <!-- MOTOR 2 -->
+
+  <gazebo reference="motor2">
+
+    <plugin
+        filename="libmulticopter_motor_model.so"
+        name="vtol::MulticopterMotorModel">
+
+      <joint_name>
+
+        motor2_joint
+
+      </joint_name>
+
+      <link_name>
+
+        motor2
+
+      </link_name>
+
+      <motor_constant>
+
+        0.0005
+
+      </motor_constant>
+
+    </plugin>
+
+  </gazebo>
+
+  <!-- MOTOR 3 -->
+
+  <gazebo reference="motor3">
+
+    <plugin
+        filename="libmulticopter_motor_model.so"
+        name="vtol::MulticopterMotorModel">
+
+      <joint_name>
+
+        motor3_joint
+
+      </joint_name>
+
+      <link_name>
+
+        motor3
+
+      </link_name>
+
+      <motor_constant>
+
+        0.0005
+
+      </motor_constant>
+
+    </plugin>
+
+  </gazebo>
+
+  <!-- MOTOR 4 -->
+
+  <gazebo reference="motor4">
+
+    <plugin
+        filename="libmulticopter_motor_model.so"
+        name="vtol::MulticopterMotorModel">
+
+      <joint_name>
+
+        motor4_joint
+
+      </joint_name>
+
+      <link_name>
+
+        motor4
+
+      </link_name>
+
+      <motor_constant>
+
+        0.0005
+
+      </motor_constant>
+
+    </plugin>
+
+  </gazebo>
+  <!-- ====================================================== -->
+  <!--                    MOTOR LINKS                         -->
+  <!-- ====================================================== -->
+
+  <gazebo reference="motor1">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="motor2">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="motor3">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="motor4">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <!-- ====================================================== -->
+  <!--                  JOINT DYNAMICS                        -->
+  <!-- ====================================================== -->
+
+  <!-- Tilt Mechanism -->
+
+  <gazebo reference="rack_n_pinion1_joint">
+    <provideFeedback>true</provideFeedback>
+    <implicitSpringDamper>true</implicitSpringDamper>
+  </gazebo>
+
+  <gazebo reference="rack_n_pinion2_joint">
+    <provideFeedback>true</provideFeedback>
+    <implicitSpringDamper>true</implicitSpringDamper>
+  </gazebo>
+
+  <!-- Propeller Joints -->
+
+  <gazebo reference="motor1_joint">
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+
+  <gazebo reference="motor2_joint">
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+
+  <gazebo reference="motor3_joint">
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+
+  <gazebo reference="motor4_joint">
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+
+  <gazebo reference="fixed_wing_propeller_joint">
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+
+  <!-- ====================================================== -->
+  <!--                         IMU                            -->
+  <!-- ====================================================== -->
+
+  <gazebo reference="body">
+
+    <sensor name="imu_sensor"
+            type="imu">
+
+      <always_on>true</always_on>
+
+      <update_rate>200</update_rate>
+
+      <visualize>true</visualize>
+
+      <topic>imu</topic>
+
+      <imu>
+
+        <angular_velocity>
+
+          <x>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>2e-4</stddev>
+            </noise>
+          </x>
+
+          <y>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>2e-4</stddev>
+            </noise>
+          </y>
+
+          <z>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>2e-4</stddev>
+            </noise>
+          </z>
+
+        </angular_velocity>
+
+        <linear_acceleration>
+
+          <x>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>1.7e-2</stddev>
+            </noise>
+          </x>
+
+          <y>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>1.7e-2</stddev>
+            </noise>
+          </y>
+
+          <z>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>1.7e-2</stddev>
+            </noise>
+          </z>
+
+        </linear_acceleration>
+
+      </imu>
+
+    </sensor>
+
+  </gazebo>
+
+  <!-- ====================================================== -->
+  <!--                ROS2 CONTROL PLUGIN                     -->
+  <!-- ====================================================== -->
+
+  <gazebo>
+
+    <plugin name="gazebo_ros2_control"
+            filename="libgazebo_ros2_control.so">
+
+      <parameters>
+        $(find vtol_controller)/config/controllers.yaml
+      </parameters>
+
+    </plugin>
+
+  </gazebo>
+
+  <!-- ====================================================== -->
+<!--              GAZEBO SENSOR SYSTEMS                     -->
+<!-- ====================================================== -->
+
+<gazebo>
+
+  <!-- IMU System -->
+
+  <plugin
+      filename="gz-sim-imu-system"
+      name="gz::sim::systems::Imu">
+  </plugin>
+
+  <!-- Sensor Manager -->
+
+  <plugin
+      filename="gz-sim-sensors-system"
+      name="gz::sim::systems::Sensors">
+
+    <render_engine>ogre2</render_engine>
+
+  </plugin>
+
+</gazebo>
+
+<!-- ====================================================== -->
+<!--                ROS2 CONTROL PLUGIN                     -->
+<!-- ====================================================== -->
+
+<gazebo>
+
+  <plugin
+      filename="gz_ros2_control-system"
+      name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+
+    <parameters>
+
+      $(find vtol_controller)/config/controllers.yaml
+
+    </parameters>
+
+  </plugin>
+
+</gazebo>
+
+</robot>

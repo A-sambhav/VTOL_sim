@@ -1,0 +1,44 @@
+[0.014s] Invoking command in '/home/asambhav/vtol_ws/build/vtol_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asambhav/e-yantra_ws/install/task_1:/opt/ros/humble /usr/bin/cmake --build /home/asambhav/vtol_ws/build/vtol_description -- -j18 -l18
+[0.034s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.120s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.166s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.166s] -- Added test 'lint_cmake' to check CMake code style
+[0.166s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.167s] -- Added test 'xmllint' to check XML markup files
+[0.167s] -- Configuring done
+[0.168s] -- Generating done
+[0.169s] -- Build files have been written to: /home/asambhav/vtol_ws/build/vtol_description
+[0.193s] Invoked command in '/home/asambhav/vtol_ws/build/vtol_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asambhav/e-yantra_ws/install/task_1:/opt/ros/humble /usr/bin/cmake --build /home/asambhav/vtol_ws/build/vtol_description -- -j18 -l18
+[0.198s] Invoking command in '/home/asambhav/vtol_ws/build/vtol_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asambhav/e-yantra_ws/install/task_1:/opt/ros/humble /usr/bin/cmake --install /home/asambhav/vtol_ws/build/vtol_description
+[0.204s] -- Install configuration: ""
+[0.204s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/launch
+[0.204s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/launch/display.launch.py
+[0.204s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/meshes
+[0.204s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/meshes/rack_n_pinion1.STL
+[0.204s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/meshes/motor3.STL
+[0.204s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/meshes/rack_n_pinion2.STL
+[0.204s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/meshes/body.STL
+[0.204s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/meshes/motor4.STL
+[0.204s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/meshes/motor2.STL
+[0.205s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/meshes/motor1.STL
+[0.205s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/meshes/fixed_wing_propeller.STL
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/urdf
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/urdf/vtol_description.urdf.xacro
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/rviz
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/worlds
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/ament_index/resource_index/package_run_dependencies/vtol_description
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/ament_index/resource_index/parent_prefix_path/vtol_description
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/environment/ament_prefix_path.sh
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/environment/ament_prefix_path.dsv
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/environment/path.sh
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/environment/path.dsv
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/local_setup.bash
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/local_setup.sh
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/local_setup.zsh
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/local_setup.dsv
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/package.dsv
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/ament_index/resource_index/packages/vtol_description
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/cmake/vtol_descriptionConfig.cmake
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/cmake/vtol_descriptionConfig-version.cmake
+[0.205s] -- Installing: /home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/package.xml
+[0.207s] Invoked command in '/home/asambhav/vtol_ws/build/vtol_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asambhav/e-yantra_ws/install/task_1:/opt/ros/humble /usr/bin/cmake --install /home/asambhav/vtol_ws/build/vtol_description
