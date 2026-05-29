@@ -34,7 +34,6 @@ class TransitionTrajectory:
     # ======================================================
 
     def generate(self, t):
-
         # ==================================================
         #             PHASE 1 : TAKEOFF
         # ==================================================
@@ -42,7 +41,6 @@ class TransitionTrajectory:
         if t < 10.0:
 
             x_d = 0.0
-
             y_d = 0.0
 
             z_d = (
@@ -53,10 +51,12 @@ class TransitionTrajectory:
             )
 
             vx_d = 0.0
-
             vy_d = 0.0
-
             vz_d = 1.0
+
+            ax_d = 0.0
+            ay_d = 0.0
+            az_d = 0.0
 
             psi_d = 0.0
 
@@ -69,16 +69,16 @@ class TransitionTrajectory:
         elif t < 13.0:
 
             x_d = 0.0
-
             y_d = 0.0
-
             z_d = self.takeoff_altitude
 
             vx_d = 0.0
-
             vy_d = 0.0
-
             vz_d = 0.0
+
+            ax_d = 0.0
+            ay_d = 0.0
+            az_d = 0.0
 
             psi_d = 0.0
 
@@ -119,8 +119,17 @@ class TransitionTrajectory:
             )
 
             vy_d = 0.0
-
             vz_d = 0.0
+
+            ax_d = (
+
+                self.forward_velocity
+                / self.transition_time
+
+            )
+
+            ay_d = 0.0
+            az_d = 0.0
 
             psi_d = 0.0
 
@@ -148,8 +157,11 @@ class TransitionTrajectory:
             vx_d = self.forward_velocity
 
             vy_d = 0.0
-
             vz_d = 0.0
+
+            ax_d = 0.0
+            ay_d = 0.0
+            az_d = 0.0
 
             psi_d = 0.0
 
@@ -201,8 +213,17 @@ class TransitionTrajectory:
             vx_d = remaining_velocity
 
             vy_d = 0.0
-
             vz_d = 0.0
+
+            ax_d = (
+
+                -self.forward_velocity
+                / self.transition_time
+
+            )
+
+            ay_d = 0.0
+            az_d = 0.0
 
             psi_d = 0.0
 
@@ -244,10 +265,13 @@ class TransitionTrajectory:
             )
 
             vx_d = 0.0
-
             vy_d = 0.0
 
             vz_d = -self.descent_rate
+
+            ax_d = 0.0
+            ay_d = 0.0
+            az_d = 0.0
 
             psi_d = 0.0
 
@@ -266,6 +290,10 @@ class TransitionTrajectory:
             'vx_d': vx_d,
             'vy_d': vy_d,
             'vz_d': vz_d,
+
+            'ax_d': ax_d,
+            'ay_d': ay_d,
+            'az_d': az_d,
 
             'psi_d': psi_d,
 

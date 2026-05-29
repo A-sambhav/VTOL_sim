@@ -42,6 +42,8 @@ class CircleTrajectory:
 
     def generate(self, t):
 
+        omega = self.angular_velocity
+
         # ==================================================
         #                 POSITION REFERENCES
         # ==================================================
@@ -54,7 +56,7 @@ class CircleTrajectory:
 
             * math.cos(
 
-                self.angular_velocity * t
+                omega * t
 
             )
 
@@ -68,7 +70,7 @@ class CircleTrajectory:
 
             * math.sin(
 
-                self.angular_velocity * t
+                omega * t
 
             )
 
@@ -83,11 +85,12 @@ class CircleTrajectory:
         vx_d = (
 
             -self.radius
-            * self.angular_velocity
+
+            * omega
 
             * math.sin(
 
-                self.angular_velocity * t
+                omega * t
 
             )
 
@@ -96,11 +99,12 @@ class CircleTrajectory:
         vy_d = (
 
             self.radius
-            * self.angular_velocity
+
+            * omega
 
             * math.cos(
 
-                self.angular_velocity * t
+                omega * t
 
             )
 
@@ -109,16 +113,47 @@ class CircleTrajectory:
         vz_d = 0.0
 
         # ==================================================
-        #                   YAW REFERENCE
+        #              ACCELERATION REFERENCES
         # ==================================================
-        #
-        # Tangent direction of trajectory
-        #
+
+        ax_d = (
+
+            -self.radius
+
+            * omega**2
+
+            * math.cos(
+
+                omega * t
+
+            )
+
+        )
+
+        ay_d = (
+
+            -self.radius
+
+            * omega**2
+
+            * math.sin(
+
+                omega * t
+
+            )
+
+        )
+
+        az_d = 0.0
+
+        # ==================================================
+        #                   YAW REFERENCE
         # ==================================================
 
         psi_d = math.atan2(
 
             vy_d,
+
             vx_d
 
         )
@@ -127,13 +162,21 @@ class CircleTrajectory:
         #             RETURN REFERENCE VECTOR
         # ==================================================
         #
-        # [x_d,
-        #  y_d,
-        #  z_d,
-        #  vx_d,
-        #  vy_d,
-        #  vz_d,
-        #  psi_d]
+        # [
+        #   x_d,
+        #   y_d,
+        #   z_d,
+        #
+        #   vx_d,
+        #   vy_d,
+        #   vz_d,
+        #
+        #   ax_d,
+        #   ay_d,
+        #   az_d,
+        #
+        #   psi_d
+        # ]
         #
         # ==================================================
 
@@ -146,6 +189,10 @@ class CircleTrajectory:
             vx_d,
             vy_d,
             vz_d,
+
+            ax_d,
+            ay_d,
+            az_d,
 
             psi_d
 

@@ -4,6 +4,8 @@
 #                       IMPORTS
 # ==========================================================
 
+from weakref import ref
+
 import rclpy
 
 from rclpy.node import Node
@@ -136,10 +138,12 @@ class PlannerNode(Node):
             z_d = 5.0
 
             vx_d = 0.0
-
             vy_d = 0.0
-
             vz_d = 0.0
+
+            ax_d = 0.0
+            ay_d = 0.0
+            az_d = 0.0
 
             psi_d = 0.0
 
@@ -152,21 +156,19 @@ class PlannerNode(Node):
         elif self.mode == 'circle':
 
             ref = self.circle_trajectory.generate(t)
-
             x_d = ref[0]
-
             y_d = ref[1]
-
             z_d = ref[2]
 
             vx_d = ref[3]
-
             vy_d = ref[4]
-
             vz_d = ref[5]
 
-            psi_d = ref[6]
+            ax_d = ref[6]
+            ay_d = ref[7]
+            az_d = ref[8]
 
+            psi_d = ref[9]
             phase = 'CIRCLE'
 
         # ==================================================
@@ -175,19 +177,13 @@ class PlannerNode(Node):
 
         elif self.mode == 'line':
 
-            velocity = 2.0
-
-            x_d = velocity * t
-
-            y_d = 0.0
-
-            z_d = 5.0
-
             vx_d = velocity
-
             vy_d = 0.0
-
             vz_d = 0.0
+
+            ax_d = 0.0
+            ay_d = 0.0
+            az_d = 0.0
 
             psi_d = 0.0
 
@@ -212,6 +208,12 @@ class PlannerNode(Node):
             vy_d = ref['vy_d']
 
             vz_d = ref['vz_d']
+            ax_d = ref['ax_d']
+
+            ay_d = ref['ay_d']
+
+            az_d = ref['az_d']
+
 
             psi_d = ref['psi_d']
 
@@ -234,6 +236,9 @@ class PlannerNode(Node):
             vy_d = 0.0
 
             vz_d = 0.0
+            ax_d = 0.0
+            ay_d = 0.0
+            az_d = 0.0
 
             psi_d = 0.0
 
@@ -257,6 +262,9 @@ class PlannerNode(Node):
         #   vx_d,
         #   vy_d,
         #   vz_d,
+        #   ax_d,
+        #   ay_d,
+        #   az_d,
         #
         #   psi_d
         # ]
@@ -272,6 +280,10 @@ class PlannerNode(Node):
             vx_d,
             vy_d,
             vz_d,
+            ax_d,
+            ay_d,
+            az_d,
+
 
             psi_d
 
@@ -296,6 +308,9 @@ class PlannerNode(Node):
             f'Vx={vx_d:.2f} | '
             f'Vy={vy_d:.2f} | '
             f'Vz={vz_d:.2f} | '
+            f'Ax={ax_d:.2f} | '
+            f'Ay={ay_d:.2f} | '
+            f'Az={az_d:.2f} | '
             f'Yaw={math.degrees(psi_d):.2f}'
 
         )
