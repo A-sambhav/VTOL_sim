@@ -79,7 +79,7 @@ setup(
         ),
     ],
 
-    install_requires=['setuptools'],
+    install_requires=['setuptools','numpy','scipy'],
 
     zip_safe=True,
 
@@ -106,7 +106,7 @@ setup(
 
             # Example:
             #
-            # 'flight_controller = vtol_controller.flight_controller:main',
+            'controller_node = vtol_controller.controller_node:main',
 
         ],
     },

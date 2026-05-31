@@ -1,2 +1,3 @@
 [console_scripts]
+controller_node = vtol_controller.controller_node:main
 thrust_allocator = vtol_controller.thrust_allocator:main

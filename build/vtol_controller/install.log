@@ -1,6 +1,16 @@
 /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/__init__.py
+/home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/controller_parameters.py
+/home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/controller_node.py
+/home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/lqr_controller.py
+/home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/controller_allocator.py
+/home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/feedback_linearization.py
 /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/thrust_allocator.py
 /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/__pycache__/__init__.cpython-310.pyc
+/home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/__pycache__/controller_parameters.cpython-310.pyc
+/home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/__pycache__/controller_node.cpython-310.pyc
+/home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/__pycache__/lqr_controller.cpython-310.pyc
+/home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/__pycache__/controller_allocator.cpython-310.pyc
+/home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/__pycache__/feedback_linearization.cpython-310.pyc
 /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/__pycache__/thrust_allocator.cpython-310.pyc
 /home/asambhav/vtol_ws/install/vtol_controller/share/ament_index/resource_index/packages/vtol_controller
 /home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller/package.xml
@@ -13,4 +23,5 @@
 /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller-0.0.0-py3.10.egg-info/SOURCES.txt
 /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller-0.0.0-py3.10.egg-info/PKG-INFO
 /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller-0.0.0-py3.10.egg-info/requires.txt
+/home/asambhav/vtol_ws/install/vtol_controller/lib/vtol_controller/controller_node
 /home/asambhav/vtol_ws/install/vtol_controller/lib/vtol_controller/thrust_allocator

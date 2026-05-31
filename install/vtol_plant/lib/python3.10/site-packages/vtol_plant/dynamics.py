@@ -130,42 +130,62 @@ class VTOLDynamics:
         #           TRANSLATIONAL DYNAMICS
         # ==================================================
 
+        Fx = 0.0
+        Fy = 0.0
+        Fz = U1
+
         u_dot = (
 
-            (v * r)
+            Fx / self.params.mass
 
-            - (w * q)
+            - q*v   
 
-            + self.params.gravity
+            + r*u
+
+            - self.params.gravity
             * math.sin(theta)
 
-        )
+)
 
         v_dot = (
 
-            (w * p)
+            Fy / self.params.mass
 
-            - (u * r)
+            - r*u
 
-            - self.params.gravity
+            + p*w
+
+            + self.params.gravity
             * math.cos(theta)
             * math.sin(phi)
 
-        )
+)
 
         w_dot = (
 
-            (u * q)
+    Fz / self.params.mass
 
-            - (v * p)
+    - p*v
 
-            - self.params.gravity
-            * math.cos(theta)
-            * math.cos(phi)
+    + q*u
 
-            + (U1 / self.params.mass)
+    - self.params.gravity
+      * math.cos(theta)
+      * math.cos(phi)
 
-        )
+)     
+        D = (
+
+    self.params.Ixx
+    * self.params.Izz
+
+    - self.params.Ixz**2
+
+)
+
+        Mx = U2
+        My = U3
+        Mz = U4
 
         # ==================================================
         #             ROTATIONAL DYNAMICS
@@ -173,84 +193,87 @@ class VTOLDynamics:
 
         p_dot = (
 
-            (
+        Mx * self.params.Izz
 
-                (self.params.Iyy - self.params.Izz)
+        + Mz * self.params.Ixz
 
-                / self.params.Ixx
+        + (
 
-            )
+        self.params.Ixx
+        * self.params.Ixz
 
-            * q * r
+        - self.params.Iyy
+        * self.params.Ixz
 
-            - (
+        + self.params.Izz
+        * self.params.Ixz
 
-                self.params.JTP
-                / self.params.Ixx
+         ) * p * q
 
-            )
+        + (
 
-            * q * Omega
+        self.params.Iyy
+        * self.params.Izz
 
-            + (
+        - self.params.Ixz**2
 
-                U2
-                / self.params.Ixx
+        - self.params.Izz**2
 
-            )
+           ) * q * r
 
-        )
+           ) / D
 
         q_dot = (
 
-            (
-
-                (self.params.Izz - self.params.Ixx)
-
-                / self.params.Iyy
-
-            )
-
-            * p * r
+            My
 
             + (
 
-                self.params.JTP
-                / self.params.Iyy
+        self.params.Izz
+        - self.params.Ixx
+
+            ) * p * r
+
+            - self.params.Ixz
+            * (
+
+            p**2
+            - r**2
 
             )
 
-            * p * Omega
-
-            + (
-
-                U3
-                / self.params.Iyy
-
-            )
-
-        )
-
+            ) / self.params.Iyy
         r_dot = (
 
-            (
+        My * self.params.Ixz
 
-                (self.params.Ixx - self.params.Iyy)
+        + Mx * self.params.Ixz
 
-                / self.params.Izz
+        + (
 
-            )
+        self.params.Ixz**2
 
-            * p * q
+        + self.params.Ixx**2
 
-            + (
+        - self.params.Ixx
+          * self.params.Iyy
 
-                U4
-                / self.params.Izz
+        ) * p * q
 
-            )
+        + (
 
-        )
+        self.params.Ixz
+        * self.params.Iyy
+
+        - self.params.Ixz
+          * self.params.Izz
+
+        - self.params.Ixz
+          * self.params.Ixx
+
+        ) * q * r
+
+        ) / D
 
         # ==================================================
         #              EULER KINEMATICS

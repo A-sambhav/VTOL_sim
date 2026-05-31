@@ -14,4 +14,9 @@ test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
 vtol_controller/__init__.py
+vtol_controller/controller_allocator.py
+vtol_controller/controller_node.py
+vtol_controller/controller_parameters.py
+vtol_controller/feedback_linearization.py
+vtol_controller/lqr_controller.py
 vtol_controller/thrust_allocator.py

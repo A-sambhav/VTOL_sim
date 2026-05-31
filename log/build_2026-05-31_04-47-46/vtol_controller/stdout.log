@@ -1,0 +1,50 @@
+running egg_info
+creating ../../build/vtol_controller/vtol_controller.egg-info
+writing ../../build/vtol_controller/vtol_controller.egg-info/PKG-INFO
+writing dependency_links to ../../build/vtol_controller/vtol_controller.egg-info/dependency_links.txt
+writing entry points to ../../build/vtol_controller/vtol_controller.egg-info/entry_points.txt
+writing requirements to ../../build/vtol_controller/vtol_controller.egg-info/requires.txt
+writing top-level names to ../../build/vtol_controller/vtol_controller.egg-info/top_level.txt
+writing manifest file '../../build/vtol_controller/vtol_controller.egg-info/SOURCES.txt'
+reading manifest file '../../build/vtol_controller/vtol_controller.egg-info/SOURCES.txt'
+writing manifest file '../../build/vtol_controller/vtol_controller.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller
+copying vtol_controller/__init__.py -> /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller
+copying vtol_controller/controller_parameters.py -> /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller
+copying vtol_controller/controller_node.py -> /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller
+copying vtol_controller/lqr_controller.py -> /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller
+copying vtol_controller/controller_allocator.py -> /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller
+copying vtol_controller/feedback_linearization.py -> /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller
+copying vtol_controller/thrust_allocator.py -> /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller
+running install
+running install_lib
+creating /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller
+copying /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller/__init__.py -> /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller
+copying /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller/controller_parameters.py -> /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller
+copying /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller/controller_node.py -> /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller
+copying /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller/lqr_controller.py -> /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller
+copying /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller/controller_allocator.py -> /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller
+copying /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller/feedback_linearization.py -> /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller
+copying /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller/thrust_allocator.py -> /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller
+byte-compiling /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/controller_parameters.py to controller_parameters.cpython-310.pyc
+byte-compiling /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/controller_node.py to controller_node.cpython-310.pyc
+byte-compiling /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/lqr_controller.py to lqr_controller.cpython-310.pyc
+byte-compiling /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/controller_allocator.py to controller_allocator.cpython-310.pyc
+byte-compiling /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/feedback_linearization.py to feedback_linearization.cpython-310.pyc
+byte-compiling /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/thrust_allocator.py to thrust_allocator.cpython-310.pyc
+running install_data
+creating /home/asambhav/vtol_ws/install/vtol_controller/share/ament_index/resource_index/packages
+copying resource/vtol_controller -> /home/asambhav/vtol_ws/install/vtol_controller/share/ament_index/resource_index/packages
+copying package.xml -> /home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller
+creating /home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller/config
+copying config/controllers.yaml -> /home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller/config
+creating /home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller/launch
+running install_egg_info
+Copying ../../build/vtol_controller/vtol_controller.egg-info to /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller-0.0.0-py3.10.egg-info
+running install_scripts
+Installing controller_node script to /home/asambhav/vtol_ws/install/vtol_controller/lib/vtol_controller
+Installing thrust_allocator script to /home/asambhav/vtol_ws/install/vtol_controller/lib/vtol_controller
+writing list of installed files to '/home/asambhav/vtol_ws/build/vtol_controller/install.log'
