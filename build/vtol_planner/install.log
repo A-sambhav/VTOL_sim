@@ -10,6 +10,7 @@
 /home/asambhav/vtol_ws/install/vtol_planner/lib/python3.10/site-packages/vtol_planner/__pycache__/circle_trajectory.cpython-310.pyc
 /home/asambhav/vtol_ws/install/vtol_planner/share/ament_index/resource_index/packages/vtol_planner
 /home/asambhav/vtol_ws/install/vtol_planner/share/vtol_planner/package.xml
+/home/asambhav/vtol_ws/install/vtol_planner/share/vtol_planner/launch/vtol_sim.launch.py
 /home/asambhav/vtol_ws/install/vtol_planner/share/vtol_planner/launch/planner.launch.py
 /home/asambhav/vtol_ws/install/vtol_planner/share/vtol_planner/rviz/planner.rviz
 /home/asambhav/vtol_ws/install/vtol_planner/lib/python3.10/site-packages/vtol_planner-0.0.0-py3.10.egg-info/top_level.txt

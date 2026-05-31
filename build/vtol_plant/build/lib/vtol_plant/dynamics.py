@@ -138,9 +138,9 @@ class VTOLDynamics:
 
             Fx / self.params.mass
 
-            - q*v   
+            - q*w   
 
-            + r*u
+            + r*v
 
             - self.params.gravity
             * math.sin(theta)
@@ -245,7 +245,7 @@ class VTOLDynamics:
             ) / self.params.Iyy
         r_dot = (
 
-        My * self.params.Ixz
+        My * self.params.Izz
 
         + Mx * self.params.Ixz
 

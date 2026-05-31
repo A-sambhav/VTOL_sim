@@ -9,6 +9,7 @@ setup.py
 ../../build/vtol_planner/vtol_planner.egg-info/top_level.txt
 ../../build/vtol_planner/vtol_planner.egg-info/zip-safe
 launch/planner.launch.py
+launch/vtol_sim.launch.py
 resource/vtol_planner
 rviz/planner.rviz
 test/test_copyright.py
