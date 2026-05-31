@@ -9,6 +9,11 @@ Panels:
         - /RobotModel1
         - /TF1
         - /TF1/Tree1
+        - /Marker1
+        - /Marker1/Topic1
+        - /Marker2
+        - /Marker2/Topic1
+        - /MarkerArray1
       Splitter Ratio: 0.5
     Tree Height: 769
   - Class: rviz_common/Selection
@@ -68,6 +73,10 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         body:
           Alpha: 1
           Show Axes: false
@@ -78,6 +87,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         motor1:
           Alpha: 1
           Show Axes: false
@@ -121,9 +134,13 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
+        base_link:
+          Value: true
         body:
           Value: true
         fixed_wing_propeller:
+          Value: true
+        imu_link:
           Value: true
         motor1:
           Value: true
@@ -137,31 +154,75 @@ Visualization Manager:
           Value: true
         rack_n_pinion2:
           Value: true
+        world:
+          Value: true
       Marker Scale: 0.5
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: false
       Tree:
-        body:
-          fixed_wing_propeller:
-            {}
-          motor3:
-            {}
-          motor4:
-            {}
-          rack_n_pinion1:
-            motor1:
-              {}
-          rack_n_pinion2:
-            motor2:
-              {}
+        world:
+          base_link:
+            body:
+              fixed_wing_propeller:
+                {}
+              imu_link:
+                {}
+              motor3:
+                {}
+              motor4:
+                {}
+              rack_n_pinion1:
+                motor1:
+                  {}
+              rack_n_pinion2:
+                motor2:
+                  {}
       Update Interval: 0
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: Marker
+      Namespaces:
+        actual_trajectory: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /actual_trajectory_marker
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: Marker
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /trajectory_marker
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /trajectory_marker_array
       Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: body
+    Fixed Frame: world
     Frame Rate: 30
   Name: root
   Tools:
@@ -204,7 +265,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.8262375593185425
+      Distance: 1735.392333984375
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -219,10 +280,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.16479724645614624
+      Pitch: 1.1247965097427368
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.7903947830200195
+      Yaw: 1.4453927278518677
     Saved: ~
 Window Geometry:
   Displays:

@@ -55,6 +55,7 @@ setup(
 
             'plant_node = vtol_plant.plant_node:main',
             'state_visualizer = vtol_plant.state_visualizer:main',
+            'odom_tf_broadcaster = vtol_plant.odom_tf_broadcaster:main'
 
         ],
 

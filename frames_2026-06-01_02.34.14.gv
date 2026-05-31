@@ -1,0 +1,16 @@
+digraph G {
+"body" -> "fixed_wing_propeller"[label=" Broadcaster: default_authority\nAverage rate: 10.312\nBuffer length: 3.2\nMost recent transform: 1780261454.096273\nOldest transform: 1780261450.896252\n"];
+"base_link" -> "body"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"rack_n_pinion1" -> "motor1"[label=" Broadcaster: default_authority\nAverage rate: 10.312\nBuffer length: 3.2\nMost recent transform: 1780261454.096273\nOldest transform: 1780261450.896252\n"];
+"body" -> "rack_n_pinion1"[label=" Broadcaster: default_authority\nAverage rate: 10.312\nBuffer length: 3.2\nMost recent transform: 1780261454.096273\nOldest transform: 1780261450.896252\n"];
+"rack_n_pinion2" -> "motor2"[label=" Broadcaster: default_authority\nAverage rate: 10.312\nBuffer length: 3.2\nMost recent transform: 1780261454.096273\nOldest transform: 1780261450.896252\n"];
+"body" -> "rack_n_pinion2"[label=" Broadcaster: default_authority\nAverage rate: 10.312\nBuffer length: 3.2\nMost recent transform: 1780261454.096273\nOldest transform: 1780261450.896252\n"];
+"body" -> "motor3"[label=" Broadcaster: default_authority\nAverage rate: 10.312\nBuffer length: 3.2\nMost recent transform: 1780261454.096273\nOldest transform: 1780261450.896252\n"];
+"body" -> "motor4"[label=" Broadcaster: default_authority\nAverage rate: 10.312\nBuffer length: 3.2\nMost recent transform: 1780261454.096273\nOldest transform: 1780261450.896252\n"];
+"world" -> "base_link"[label=" Broadcaster: default_authority\nAverage rate: 188.848\nBuffer length: 2.701\nMost recent transform: 1780261454.153769\nOldest transform: 1780261451.453181\n"];
+"body" -> "imu_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1780261454.16258"[ shape=plaintext ] ;
+}->"world";
+}

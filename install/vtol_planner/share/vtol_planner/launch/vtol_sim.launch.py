@@ -1,29 +1,50 @@
 from launch import LaunchDescription
 
-from launch_ros.actions import Node
+from launch.actions import IncludeLaunchDescription
 
-import os
+from launch.launch_description_sources import (
+    PythonLaunchDescriptionSource
+)
+
+
+from launch_ros.actions import Node
 
 from ament_index_python.packages import (
     get_package_share_directory
 )
 
+import os
+
 
 def generate_launch_description():
 
-    rviz_config = os.path.join(
+    display_launch = os.path.join(
 
         get_package_share_directory(
-            'vtol_planner'
+            'vtol_description'
         ),
 
-        'rviz',
+        'launch',
 
-        'planner.rviz'
+        'display.launch.py'
 
     )
 
     return LaunchDescription([
+
+        # ==============================================
+        # VTOL DESCRIPTION
+        # ==============================================
+
+        IncludeLaunchDescription(
+
+            PythonLaunchDescriptionSource(
+
+                display_launch
+
+            )
+
+        ),
 
         # ==============================================
         # Planner
@@ -56,6 +77,16 @@ def generate_launch_description():
         ),
 
         # ==============================================
+        # ODOM -> TF
+        # ==============================================
+
+        Node(
+            package='vtol_plant',
+            executable='odom_tf_broadcaster',
+            output='screen'
+        ),
+
+        # ==============================================
         # Trajectory Visualizer
         # ==============================================
 
@@ -74,34 +105,15 @@ def generate_launch_description():
             executable='state_visualizer',
             output='screen'
         ),
-
-        # ==============================================
-        # TF
-        # ==============================================
-
         Node(
-            package='tf2_ros',
-            executable='static_transform_publisher',
-            arguments=[
-                '0','0','0',
-                '0','0','0',
-                'map',
-                'world'
-            ]
-        ),
-
-        # ==============================================
-        # RViz
-        # ==============================================
-
-        Node(
-            package='rviz2',
-            executable='rviz2',
-            arguments=[
-                '-d',
-                rviz_config
-            ],
-            output='screen'
-        )
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        arguments=[
+        '0', '0', '0',
+        '0', '0', '0',
+        'map',
+        'world'
+    ]
+    ),
 
     ])
