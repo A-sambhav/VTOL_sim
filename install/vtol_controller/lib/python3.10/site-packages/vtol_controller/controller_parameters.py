@@ -52,11 +52,11 @@ class ControllerParameters:
         #
         # ==================================================
 
-        self.k1x = 2.0
-        self.k2x = 3.0
+        self.k1x = -2.0
+        self.k2x = -6.0
 
-        self.k1y = 2.0
-        self.k2y = 3.0
+        self.k1y = -2.0
+        self.k2y = -8.0
 
         self.k1z = 2.0
         self.k2z = 3.0

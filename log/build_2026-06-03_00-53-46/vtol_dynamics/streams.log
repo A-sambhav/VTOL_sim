@@ -1,0 +1,25 @@
+[1.069s] Invoking command in '/home/asambhav/vtol_ws/src/vtol_dynamics': PYTHONPATH=/home/asambhav/vtol_ws/build/vtol_dynamics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/vtol_dynamics/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_dynamics build --build-base /home/asambhav/vtol_ws/build/vtol_dynamics/build install --record /home/asambhav/vtol_ws/build/vtol_dynamics/install.log --single-version-externally-managed install_data
+[1.239s] running egg_info
+[1.248s] writing ../../build/vtol_dynamics/vtol_dynamics.egg-info/PKG-INFO
+[1.249s] writing dependency_links to ../../build/vtol_dynamics/vtol_dynamics.egg-info/dependency_links.txt
+[1.249s] writing entry points to ../../build/vtol_dynamics/vtol_dynamics.egg-info/entry_points.txt
+[1.249s] writing requirements to ../../build/vtol_dynamics/vtol_dynamics.egg-info/requires.txt
+[1.249s] writing top-level names to ../../build/vtol_dynamics/vtol_dynamics.egg-info/top_level.txt
+[1.269s] reading manifest file '../../build/vtol_dynamics/vtol_dynamics.egg-info/SOURCES.txt'
+[1.269s] writing manifest file '../../build/vtol_dynamics/vtol_dynamics.egg-info/SOURCES.txt'
+[1.269s] running build
+[1.270s] running build_py
+[1.270s] copying vtol_dynamics/vtol_dynamics_node.py -> /home/asambhav/vtol_ws/build/vtol_dynamics/build/lib/vtol_dynamics
+[1.270s] copying vtol_dynamics/__init__.py -> /home/asambhav/vtol_ws/build/vtol_dynamics/build/lib/vtol_dynamics
+[1.270s] running install
+[1.272s] running install_lib
+[1.283s] running install_data
+[1.283s] copying resource/vtol_dynamics -> /home/asambhav/vtol_ws/install/vtol_dynamics/share/ament_index/resource_index/packages
+[1.283s] copying package.xml -> /home/asambhav/vtol_ws/install/vtol_dynamics/share/vtol_dynamics
+[1.283s] running install_egg_info
+[1.293s] removing '/home/asambhav/vtol_ws/install/vtol_dynamics/lib/python3.10/site-packages/vtol_dynamics-0.0.0-py3.10.egg-info' (and everything under it)
+[1.294s] Copying ../../build/vtol_dynamics/vtol_dynamics.egg-info to /home/asambhav/vtol_ws/install/vtol_dynamics/lib/python3.10/site-packages/vtol_dynamics-0.0.0-py3.10.egg-info
+[1.294s] running install_scripts
+[1.314s] Installing vtol_dynamics_node script to /home/asambhav/vtol_ws/install/vtol_dynamics/lib/vtol_dynamics
+[1.314s] writing list of installed files to '/home/asambhav/vtol_ws/build/vtol_dynamics/install.log'
+[1.330s] Invoked command in '/home/asambhav/vtol_ws/src/vtol_dynamics' returned '0': PYTHONPATH=/home/asambhav/vtol_ws/build/vtol_dynamics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/vtol_dynamics/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_dynamics build --build-base /home/asambhav/vtol_ws/build/vtol_dynamics/build install --record /home/asambhav/vtol_ws/build/vtol_dynamics/install.log --single-version-externally-managed install_data

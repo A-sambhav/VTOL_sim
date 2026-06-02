@@ -1,0 +1,22 @@
+[0.292s] Invoking command in '/home/asambhav/vtol_ws/build/vtol_gazebo_plugins': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asambhav/vtol_ws/install/vtol_testbench:/home/asambhav/vtol_ws/install/vtol_plant:/home/asambhav/vtol_ws/install/vtol_planner:/home/asambhav/vtol_ws/install/vtol_dynamics:/home/asambhav/vtol_ws/install/vtol_controller:/home/asambhav/e-yantra_ws/install/task_1:/opt/ros/humble /usr/bin/cmake --build /home/asambhav/vtol_ws/build/vtol_gazebo_plugins -- -j18 -l18
+[0.567s] [100%] Built target multicopter_motor_model
+[0.705s] Invoked command in '/home/asambhav/vtol_ws/build/vtol_gazebo_plugins' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asambhav/vtol_ws/install/vtol_testbench:/home/asambhav/vtol_ws/install/vtol_plant:/home/asambhav/vtol_ws/install/vtol_planner:/home/asambhav/vtol_ws/install/vtol_dynamics:/home/asambhav/vtol_ws/install/vtol_controller:/home/asambhav/e-yantra_ws/install/task_1:/opt/ros/humble /usr/bin/cmake --build /home/asambhav/vtol_ws/build/vtol_gazebo_plugins -- -j18 -l18
+[0.712s] Invoking command in '/home/asambhav/vtol_ws/build/vtol_gazebo_plugins': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asambhav/vtol_ws/install/vtol_testbench:/home/asambhav/vtol_ws/install/vtol_plant:/home/asambhav/vtol_ws/install/vtol_planner:/home/asambhav/vtol_ws/install/vtol_dynamics:/home/asambhav/vtol_ws/install/vtol_controller:/home/asambhav/e-yantra_ws/install/task_1:/opt/ros/humble /usr/bin/cmake --install /home/asambhav/vtol_ws/build/vtol_gazebo_plugins
+[0.721s] -- Install configuration: ""
+[0.721s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_gazebo_plugins/lib/libmulticopter_motor_model.so
+[0.721s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/ament_index/resource_index/package_run_dependencies/vtol_gazebo_plugins
+[0.721s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/ament_index/resource_index/parent_prefix_path/vtol_gazebo_plugins
+[0.721s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/environment/ament_prefix_path.sh
+[0.721s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/environment/ament_prefix_path.dsv
+[0.721s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/environment/path.sh
+[0.721s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/environment/path.dsv
+[0.721s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/local_setup.bash
+[0.722s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/local_setup.sh
+[0.722s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/local_setup.zsh
+[0.722s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/local_setup.dsv
+[0.722s] -- Installing: /home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/package.dsv
+[0.722s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/ament_index/resource_index/packages/vtol_gazebo_plugins
+[0.722s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/cmake/vtol_gazebo_pluginsConfig.cmake
+[0.722s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/cmake/vtol_gazebo_pluginsConfig-version.cmake
+[0.722s] -- Up-to-date: /home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/package.xml
+[0.728s] Invoked command in '/home/asambhav/vtol_ws/build/vtol_gazebo_plugins' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asambhav/vtol_ws/install/vtol_testbench:/home/asambhav/vtol_ws/install/vtol_plant:/home/asambhav/vtol_ws/install/vtol_planner:/home/asambhav/vtol_ws/install/vtol_dynamics:/home/asambhav/vtol_ws/install/vtol_controller:/home/asambhav/e-yantra_ws/install/task_1:/opt/ros/humble /usr/bin/cmake --install /home/asambhav/vtol_ws/build/vtol_gazebo_plugins

@@ -56,7 +56,7 @@ class ControllerNode(Node):
         #              REFERENCE STATES
         # ==================================================
 
-        self.reference = [0.0] * 7
+        self.reference = [0.0] * 10
 
         # ==================================================
         #                PLANT STATES
@@ -148,7 +148,7 @@ class ControllerNode(Node):
 
     def control_loop(self):
     
-        if len(self.reference) < 7:
+        if len(self.reference) < 10:
             return
 
         if len(self.states) < 12:
@@ -166,7 +166,7 @@ class ControllerNode(Node):
         vyr = self.reference[4]
         vzr = self.reference[5]
 
-        psi_r = self.reference[6]
+        psi_r = self.reference[9]
 
     # ==================================================
     #      PLANNER CURRENTLY DOES NOT PROVIDE

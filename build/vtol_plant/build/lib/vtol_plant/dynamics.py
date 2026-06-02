@@ -193,87 +193,49 @@ class VTOLDynamics:
 
         p_dot = (
 
-        Mx * self.params.Izz
+                ((self.params.Iyy - self.params.Izz)
+                / self.params.Ixx)
 
-        + Mz * self.params.Ixz
+                * q * r
 
-        + (
+                - (self.params.JTP
+                / self.params.Ixx)
 
-        self.params.Ixx
-        * self.params.Ixz
+                * q * Omega 
 
-        - self.params.Iyy
-        * self.params.Ixz
+                + (U2
+                / self.params.Ixx)
 
-        + self.params.Izz
-        * self.params.Ixz
-
-         ) * p * q
-
-        + (
-
-        self.params.Iyy
-        * self.params.Izz
-
-        - self.params.Ixz**2
-
-        - self.params.Izz**2
-
-           ) * q * r
-
-           ) / D
+                )
 
         q_dot = (
 
-            My
+                ((self.params.Izz - self.params.Ixx)
+                / self.params.Iyy)
 
-            + (
+                * p * r
 
-        self.params.Izz
-        - self.params.Ixx
+                + (self.params.JTP
+                / self.params.Iyy)
 
-            ) * p * r
+                * p * Omega
 
-            - self.params.Ixz
-            * (
+                + (U3
+                / self.params.Iyy)
 
-            p**2
-            - r**2
+                )
 
-            )
-
-            ) / self.params.Iyy
         r_dot = (
 
-        My * self.params.Izz
+    ((self.params.Ixx - self.params.Iyy)
+     / self.params.Izz)
 
-        + Mx * self.params.Ixz
+    * p * q
 
-        + (
+    + (U4
+       / self.params.Izz)
 
-        self.params.Ixz**2
-
-        + self.params.Ixx**2
-
-        - self.params.Ixx
-          * self.params.Iyy
-
-        ) * p * q
-
-        + (
-
-        self.params.Ixz
-        * self.params.Iyy
-
-        - self.params.Ixz
-          * self.params.Izz
-
-        - self.params.Ixz
-          * self.params.Ixx
-
-        ) * q * r
-
-        ) / D
+        )
 
         # ==================================================
         #              EULER KINEMATICS
