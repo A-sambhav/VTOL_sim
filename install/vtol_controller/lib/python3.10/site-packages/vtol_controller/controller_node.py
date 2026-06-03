@@ -298,6 +298,13 @@ class ControllerNode(Node):
         theta_r = fl_output['theta_ref']
 
         psi_r = fl_output['psi_ref']
+        self.get_logger().info(
+
+    f"phi_ref={phi_r:.3f} "
+    f"theta_ref={theta_r:.3f} "
+    f"psi_ref={psi_r:.3f}"
+
+)
     # ==================================================
     #              LQR CONTROLLER
     # ==================================================

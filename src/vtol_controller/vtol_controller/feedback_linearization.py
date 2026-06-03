@@ -105,34 +105,37 @@ class FeedbackLinearization:
         # ==================================================
         #            VIRTUAL CONTROL INPUTS
         # ==================================================
+        # ==================================================
+        #            VIRTUAL ACCELERATIONS
+        # ==================================================
 
-        ux = (
+        xdd = (
 
-            self.k1x * ex
+            self.k1x * ex_dot
 
             +
 
-            self.k2x * ex_dot
+            self.k2x * ex
 
         )
 
-        uy = (
+        ydd = (
 
-            self.k1y * ey
+            self.k1y * ey_dot
 
             +
 
-            self.k2y * ey_dot
+            self.k2y * ey
 
         )
 
-        uz = (
+        zdd = (
 
-            self.k1z * ez
+            self.k1z * ez_dot
 
             +
 
-            self.k2z * ez_dot
+            self.k2z * ez
 
         )
 
@@ -144,13 +147,7 @@ class FeedbackLinearization:
 
         cos_theta = math.cos(theta)
 
-        denominator = (
-
-            cos_phi
-            *
-            cos_theta
-
-        )
+        denominator = cos_phi * cos_theta
 
         if abs(denominator) < 0.05:
 
@@ -162,7 +159,7 @@ class FeedbackLinearization:
 
             *
 
-            (uz + self.g)
+            (zdd + self.g)
 
             /
 
@@ -171,36 +168,22 @@ class FeedbackLinearization:
         )
 
         # ==================================================
-        #        INTERMEDIATE VARIABLES
+        #          FEEDBACK LINEARIZATION TERMS
         # ==================================================
 
-        if abs(U1) < 0.01:
+        z_term = zdd + self.g
 
-            U1 = 0.01
+        if abs(z_term) < 1e-6:
 
-        a = (
+            z_term = 1e-6
 
-            self.m
-            *
-            ux
+        a = xdd / z_term
 
-            /
+        b = ydd / z_term
 
-            U1
+        c = math.cos(psi_r)
 
-        )
-
-        b = (
-
-            self.m
-            *
-            uy
-
-            /
-
-            U1
-
-        )
+        d = math.sin(psi_r)
 
         # ==================================================
         #             DESIRED PITCH
@@ -208,25 +191,11 @@ class FeedbackLinearization:
 
         theta_ref = math.atan(
 
-            (
+            a * c
 
-                a * math.cos(psi_r)
+            +
 
-                +
-
-                b * math.sin(psi_r)
-
-            )
-
-            /
-
-            max(
-
-                math.cos(phi),
-
-                0.05
-
-            )
+            b * d
 
         )
 
@@ -234,27 +203,47 @@ class FeedbackLinearization:
         #             DESIRED ROLL
         # ==================================================
 
-        phi_ref = math.atan(
+        phi_num = (
 
-            (
+            (a * c + b * d)
 
-                a * math.sin(psi_r)
+            * d
 
-                -
+            -
 
-                b * math.cos(psi_r)
+            b
+
+        )
+
+        phi_den = (
+
+            c
+
+            *
+
+            math.sqrt(
+
+                (a * c + b * d) ** 2
+
+                +
+
+                1.0
 
             )
+
+        )
+
+        if abs(phi_den) < 1e-6:
+
+            phi_den = 1e-6
+
+        phi_ref = math.atan(
+
+            phi_num
 
             /
 
-            max(
-
-                math.cos(theta_ref),
-
-                0.05
-
-            )
+            phi_den
 
         )
 
@@ -272,9 +261,9 @@ class FeedbackLinearization:
 
             'psi_ref': psi_r,
 
-            'ux': ux,
-            'uy': uy,
-            'uz': uz,
+            'ux': xdd,
+            'uy': ydd,
+            'uz': zdd,
 
             'ex': ex,
             'ey': ey,

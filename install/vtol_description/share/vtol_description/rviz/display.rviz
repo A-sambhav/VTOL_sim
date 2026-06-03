@@ -142,6 +142,8 @@ Visualization Manager:
           Value: true
         imu_link:
           Value: true
+        map:
+          Value: true
         motor1:
           Value: true
         motor2:
@@ -162,23 +164,24 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        world:
-          base_link:
-            body:
-              fixed_wing_propeller:
-                {}
-              imu_link:
-                {}
-              motor3:
-                {}
-              motor4:
-                {}
-              rack_n_pinion1:
-                motor1:
+        map:
+          world:
+            base_link:
+              body:
+                fixed_wing_propeller:
                   {}
-              rack_n_pinion2:
-                motor2:
+                imu_link:
                   {}
+                motor3:
+                  {}
+                motor4:
+                  {}
+                rack_n_pinion1:
+                  motor1:
+                    {}
+                rack_n_pinion2:
+                  motor2:
+                    {}
       Update Interval: 0
       Value: true
     - Class: rviz_default_plugins/Marker
@@ -198,7 +201,7 @@ Visualization Manager:
       Enabled: true
       Name: Marker
       Namespaces:
-        {}
+        trajectory: true
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -265,7 +268,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1735.392333984375
+      Distance: 98.65126037597656
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -280,10 +283,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.1247965097427368
+      Pitch: 0.03979763016104698
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.4453927278518677
+      Yaw: 0.13539357483386993
     Saved: ~
 Window Geometry:
   Displays:

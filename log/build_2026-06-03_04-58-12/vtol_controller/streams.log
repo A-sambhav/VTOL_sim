@@ -1,0 +1,34 @@
+[1.090s] Invoking command in '/home/asambhav/vtol_ws/src/vtol_controller': PYTHONPATH=/home/asambhav/vtol_ws/build/vtol_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_controller build --build-base /home/asambhav/vtol_ws/build/vtol_controller/build install --record /home/asambhav/vtol_ws/build/vtol_controller/install.log --single-version-externally-managed install_data
+[1.251s] running egg_info
+[1.261s] writing ../../build/vtol_controller/vtol_controller.egg-info/PKG-INFO
+[1.261s] writing dependency_links to ../../build/vtol_controller/vtol_controller.egg-info/dependency_links.txt
+[1.262s] writing entry points to ../../build/vtol_controller/vtol_controller.egg-info/entry_points.txt
+[1.262s] writing requirements to ../../build/vtol_controller/vtol_controller.egg-info/requires.txt
+[1.262s] writing top-level names to ../../build/vtol_controller/vtol_controller.egg-info/top_level.txt
+[1.282s] reading manifest file '../../build/vtol_controller/vtol_controller.egg-info/SOURCES.txt'
+[1.283s] writing manifest file '../../build/vtol_controller/vtol_controller.egg-info/SOURCES.txt'
+[1.283s] running build
+[1.283s] running build_py
+[1.283s] copying vtol_controller/__init__.py -> /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller
+[1.283s] copying vtol_controller/controller_parameters.py -> /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller
+[1.284s] copying vtol_controller/controller_node.py -> /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller
+[1.284s] copying vtol_controller/lqr_controller.py -> /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller
+[1.284s] copying vtol_controller/controller_allocator.py -> /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller
+[1.284s] copying vtol_controller/feedback_linearization.py -> /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller
+[1.284s] copying vtol_controller/thrust_allocator.py -> /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller
+[1.284s] running install
+[1.287s] running install_lib
+[1.298s] copying /home/asambhav/vtol_ws/build/vtol_controller/build/lib/vtol_controller/controller_parameters.py -> /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller
+[1.298s] byte-compiling /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller/controller_parameters.py to controller_parameters.cpython-310.pyc
+[1.298s] running install_data
+[1.299s] copying resource/vtol_controller -> /home/asambhav/vtol_ws/install/vtol_controller/share/ament_index/resource_index/packages
+[1.299s] copying package.xml -> /home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller
+[1.299s] copying config/controllers.yaml -> /home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller/config
+[1.299s] running install_egg_info
+[1.310s] removing '/home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller-0.0.0-py3.10.egg-info' (and everything under it)
+[1.310s] Copying ../../build/vtol_controller/vtol_controller.egg-info to /home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages/vtol_controller-0.0.0-py3.10.egg-info
+[1.310s] running install_scripts
+[1.331s] Installing controller_node script to /home/asambhav/vtol_ws/install/vtol_controller/lib/vtol_controller
+[1.331s] Installing thrust_allocator script to /home/asambhav/vtol_ws/install/vtol_controller/lib/vtol_controller
+[1.332s] writing list of installed files to '/home/asambhav/vtol_ws/build/vtol_controller/install.log'
+[1.348s] Invoked command in '/home/asambhav/vtol_ws/src/vtol_controller' returned '0': PYTHONPATH=/home/asambhav/vtol_ws/build/vtol_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_controller build --build-base /home/asambhav/vtol_ws/build/vtol_controller/build install --record /home/asambhav/vtol_ws/build/vtol_controller/install.log --single-version-externally-managed install_data
