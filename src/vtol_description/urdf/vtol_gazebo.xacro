@@ -13,7 +13,7 @@
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
 
-    <gravity>false</gravity>
+    <gravity>true</gravity>
     <selfCollide>false</selfCollide>
   </gazebo>
   <!-- ====================================================== -->

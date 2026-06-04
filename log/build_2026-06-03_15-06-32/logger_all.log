@@ -1,0 +1,462 @@
+[0.119s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.119s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=18, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x73d3ffb91690>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x73d3ffb12380>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x73d3ffb12380>>, mixin_verb=('build',))
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.154s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/asambhav/vtol_ws'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_controller) by extension 'ignore'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_controller) by extension 'ignore_ament_install'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_controller) by extensions ['colcon_pkg']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_controller) by extension 'colcon_pkg'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_controller) by extensions ['colcon_meta']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_controller) by extension 'colcon_meta'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_controller) by extensions ['ros']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_controller) by extension 'ros'
+[0.167s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vtol_controller' with type 'ros.ament_python' and name 'vtol_controller'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_description) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_description) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_description) by extension 'ignore_ament_install'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_description) by extensions ['colcon_pkg']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_description) by extension 'colcon_pkg'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_description) by extensions ['colcon_meta']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_description) by extension 'colcon_meta'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_description) by extensions ['ros']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_description) by extension 'ros'
+[0.169s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vtol_description' with type 'ros.ament_cmake' and name 'vtol_description'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_dynamics) by extensions ['ignore', 'ignore_ament_install']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_dynamics) by extension 'ignore'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_dynamics) by extension 'ignore_ament_install'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_dynamics) by extensions ['colcon_pkg']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_dynamics) by extension 'colcon_pkg'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_dynamics) by extensions ['colcon_meta']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_dynamics) by extension 'colcon_meta'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_dynamics) by extensions ['ros']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_dynamics) by extension 'ros'
+[0.169s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vtol_dynamics' with type 'ros.ament_python' and name 'vtol_dynamics'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_gazebo_plugins) by extensions ['ignore', 'ignore_ament_install']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_gazebo_plugins) by extension 'ignore'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_gazebo_plugins) by extension 'ignore_ament_install'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_gazebo_plugins) by extensions ['colcon_pkg']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_gazebo_plugins) by extension 'colcon_pkg'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_gazebo_plugins) by extensions ['colcon_meta']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_gazebo_plugins) by extension 'colcon_meta'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_gazebo_plugins) by extensions ['ros']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_gazebo_plugins) by extension 'ros'
+[0.170s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vtol_gazebo_plugins' with type 'ros.ament_cmake' and name 'vtol_gazebo_plugins'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_planner) by extensions ['ignore', 'ignore_ament_install']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_planner) by extension 'ignore'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_planner) by extension 'ignore_ament_install'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_planner) by extensions ['colcon_pkg']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_planner) by extension 'colcon_pkg'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_planner) by extensions ['colcon_meta']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_planner) by extension 'colcon_meta'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_planner) by extensions ['ros']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_planner) by extension 'ros'
+[0.171s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vtol_planner' with type 'ros.ament_python' and name 'vtol_planner'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_plant) by extensions ['ignore', 'ignore_ament_install']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_plant) by extension 'ignore'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_plant) by extension 'ignore_ament_install'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_plant) by extensions ['colcon_pkg']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_plant) by extension 'colcon_pkg'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_plant) by extensions ['colcon_meta']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_plant) by extension 'colcon_meta'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_plant) by extensions ['ros']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_plant) by extension 'ros'
+[0.171s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vtol_plant' with type 'ros.ament_python' and name 'vtol_plant'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_testbench) by extensions ['ignore', 'ignore_ament_install']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_testbench) by extension 'ignore'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_testbench) by extension 'ignore_ament_install'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_testbench) by extensions ['colcon_pkg']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_testbench) by extension 'colcon_pkg'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_testbench) by extensions ['colcon_meta']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_testbench) by extension 'colcon_meta'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_testbench) by extensions ['ros']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/vtol_testbench) by extension 'ros'
+[0.172s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vtol_testbench' with type 'ros.ament_python' and name 'vtol_testbench'
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.189s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.189s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.191s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/asambhav/vtol_ws/install
+[0.192s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 9 installed packages in /home/asambhav/e-yantra_ws/install
+[0.193s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 409 installed packages in /opt/ros/humble
+[0.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'vtol_controller' build argument 'cmake_args' from command line to 'None'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'vtol_controller' build argument 'cmake_target' from command line to 'None'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'vtol_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.244s] DEBUG:colcon.colcon_core.verb:Building package 'vtol_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/asambhav/vtol_ws/build/vtol_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/asambhav/vtol_ws/install/vtol_controller', 'merge_install': False, 'path': '/home/asambhav/vtol_ws/src/vtol_controller', 'symlink_install': False, 'test_result_base': None}
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_description' build argument 'cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_description' build argument 'cmake_target' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.244s] DEBUG:colcon.colcon_core.verb:Building package 'vtol_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/asambhav/vtol_ws/build/vtol_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/asambhav/vtol_ws/install/vtol_description', 'merge_install': False, 'path': '/home/asambhav/vtol_ws/src/vtol_description', 'symlink_install': False, 'test_result_base': None}
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_dynamics' build argument 'cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_dynamics' build argument 'cmake_target' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_dynamics' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_dynamics' build argument 'cmake_clean_cache' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_dynamics' build argument 'cmake_clean_first' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_dynamics' build argument 'cmake_force_configure' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_dynamics' build argument 'ament_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_dynamics' build argument 'catkin_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_dynamics' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.244s] DEBUG:colcon.colcon_core.verb:Building package 'vtol_dynamics' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/asambhav/vtol_ws/build/vtol_dynamics', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/asambhav/vtol_ws/install/vtol_dynamics', 'merge_install': False, 'path': '/home/asambhav/vtol_ws/src/vtol_dynamics', 'symlink_install': False, 'test_result_base': None}
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_gazebo_plugins' build argument 'cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_gazebo_plugins' build argument 'cmake_target' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_gazebo_plugins' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_gazebo_plugins' build argument 'cmake_clean_cache' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_gazebo_plugins' build argument 'cmake_clean_first' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_gazebo_plugins' build argument 'cmake_force_configure' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_gazebo_plugins' build argument 'ament_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'vtol_gazebo_plugins' build argument 'catkin_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_gazebo_plugins' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.245s] DEBUG:colcon.colcon_core.verb:Building package 'vtol_gazebo_plugins' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/asambhav/vtol_ws/build/vtol_gazebo_plugins', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins', 'merge_install': False, 'path': '/home/asambhav/vtol_ws/src/vtol_gazebo_plugins', 'symlink_install': False, 'test_result_base': None}
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_planner' build argument 'cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_planner' build argument 'cmake_target' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_planner' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_planner' build argument 'cmake_clean_cache' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_planner' build argument 'cmake_clean_first' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_planner' build argument 'cmake_force_configure' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_planner' build argument 'ament_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_planner' build argument 'catkin_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_planner' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.245s] DEBUG:colcon.colcon_core.verb:Building package 'vtol_planner' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/asambhav/vtol_ws/build/vtol_planner', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/asambhav/vtol_ws/install/vtol_planner', 'merge_install': False, 'path': '/home/asambhav/vtol_ws/src/vtol_planner', 'symlink_install': False, 'test_result_base': None}
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_plant' build argument 'cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_plant' build argument 'cmake_target' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_plant' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_plant' build argument 'cmake_clean_cache' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_plant' build argument 'cmake_clean_first' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_plant' build argument 'cmake_force_configure' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_plant' build argument 'ament_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_plant' build argument 'catkin_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_plant' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.245s] DEBUG:colcon.colcon_core.verb:Building package 'vtol_plant' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/asambhav/vtol_ws/build/vtol_plant', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/asambhav/vtol_ws/install/vtol_plant', 'merge_install': False, 'path': '/home/asambhav/vtol_ws/src/vtol_plant', 'symlink_install': False, 'test_result_base': None}
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_testbench' build argument 'cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_testbench' build argument 'cmake_target' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_testbench' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_testbench' build argument 'cmake_clean_cache' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_testbench' build argument 'cmake_clean_first' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_testbench' build argument 'cmake_force_configure' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_testbench' build argument 'ament_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_testbench' build argument 'catkin_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'vtol_testbench' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.245s] DEBUG:colcon.colcon_core.verb:Building package 'vtol_testbench' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/asambhav/vtol_ws/build/vtol_testbench', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/asambhav/vtol_ws/install/vtol_testbench', 'merge_install': False, 'path': '/home/asambhav/vtol_ws/src/vtol_testbench', 'symlink_install': False, 'test_result_base': None}
+[0.245s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.246s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.247s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/asambhav/vtol_ws/src/vtol_controller' with build type 'ament_python'
+[0.247s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_controller', 'ament_prefix_path')
+[0.249s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.249s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller/hook/ament_prefix_path.ps1'
+[0.249s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller/hook/ament_prefix_path.dsv'
+[0.249s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller/hook/ament_prefix_path.sh'
+[0.250s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.250s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.253s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/asambhav/vtol_ws/src/vtol_description' with build type 'ament_cmake'
+[0.253s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/asambhav/vtol_ws/src/vtol_description'
+[0.253s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.253s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.256s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/asambhav/vtol_ws/src/vtol_dynamics' with build type 'ament_python'
+[0.256s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_dynamics', 'ament_prefix_path')
+[0.256s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_dynamics/share/vtol_dynamics/hook/ament_prefix_path.ps1'
+[0.257s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asambhav/vtol_ws/install/vtol_dynamics/share/vtol_dynamics/hook/ament_prefix_path.dsv'
+[0.257s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_dynamics/share/vtol_dynamics/hook/ament_prefix_path.sh'
+[0.257s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.257s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.259s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/asambhav/vtol_ws/src/vtol_gazebo_plugins' with build type 'ament_cmake'
+[0.259s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/asambhav/vtol_ws/src/vtol_gazebo_plugins'
+[0.260s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.260s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.262s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/asambhav/vtol_ws/src/vtol_planner' with build type 'ament_python'
+[0.262s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_planner', 'ament_prefix_path')
+[0.262s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_planner/share/vtol_planner/hook/ament_prefix_path.ps1'
+[0.263s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asambhav/vtol_ws/install/vtol_planner/share/vtol_planner/hook/ament_prefix_path.dsv'
+[0.263s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_planner/share/vtol_planner/hook/ament_prefix_path.sh'
+[0.263s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.263s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.265s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/asambhav/vtol_ws/src/vtol_plant' with build type 'ament_python'
+[0.265s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_plant', 'ament_prefix_path')
+[0.266s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_plant/share/vtol_plant/hook/ament_prefix_path.ps1'
+[0.266s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asambhav/vtol_ws/install/vtol_plant/share/vtol_plant/hook/ament_prefix_path.dsv'
+[0.266s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_plant/share/vtol_plant/hook/ament_prefix_path.sh'
+[0.266s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.266s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.269s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/asambhav/vtol_ws/src/vtol_testbench' with build type 'ament_python'
+[0.269s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_testbench', 'ament_prefix_path')
+[0.269s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_testbench/share/vtol_testbench/hook/ament_prefix_path.ps1'
+[0.269s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asambhav/vtol_ws/install/vtol_testbench/share/vtol_testbench/hook/ament_prefix_path.dsv'
+[0.269s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_testbench/share/vtol_testbench/hook/ament_prefix_path.sh'
+[0.270s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.270s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.408s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/asambhav/vtol_ws/src/vtol_controller'
+[0.409s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.409s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.417s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/asambhav/vtol_ws/build/vtol_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asambhav/vtol_ws/install/vtol_testbench:/home/asambhav/vtol_ws/install/vtol_plant:/home/asambhav/vtol_ws/install/vtol_planner:/home/asambhav/vtol_ws/install/vtol_dynamics:/home/asambhav/vtol_ws/install/vtol_controller:/home/asambhav/e-yantra_ws/install/task_1:/opt/ros/humble /usr/bin/cmake --build /home/asambhav/vtol_ws/build/vtol_description -- -j18 -l18
+[0.553s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/asambhav/vtol_ws/src/vtol_dynamics'
+[0.553s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.553s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.560s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/asambhav/vtol_ws/build/vtol_gazebo_plugins': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asambhav/vtol_ws/install/vtol_testbench:/home/asambhav/vtol_ws/install/vtol_plant:/home/asambhav/vtol_ws/install/vtol_planner:/home/asambhav/vtol_ws/install/vtol_dynamics:/home/asambhav/vtol_ws/install/vtol_controller:/home/asambhav/e-yantra_ws/install/task_1:/opt/ros/humble /usr/bin/cmake --build /home/asambhav/vtol_ws/build/vtol_gazebo_plugins -- -j18 -l18
+[0.697s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/asambhav/vtol_ws/src/vtol_planner'
+[0.698s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.698s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.838s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/asambhav/vtol_ws/src/vtol_plant'
+[0.839s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.839s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.975s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/asambhav/vtol_ws/src/vtol_testbench'
+[0.975s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.975s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.979s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/asambhav/vtol_ws/build/vtol_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asambhav/vtol_ws/install/vtol_testbench:/home/asambhav/vtol_ws/install/vtol_plant:/home/asambhav/vtol_ws/install/vtol_planner:/home/asambhav/vtol_ws/install/vtol_dynamics:/home/asambhav/vtol_ws/install/vtol_controller:/home/asambhav/e-yantra_ws/install/task_1:/opt/ros/humble /usr/bin/cmake --build /home/asambhav/vtol_ws/build/vtol_description -- -j18 -l18
+[0.990s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/asambhav/vtol_ws/build/vtol_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asambhav/vtol_ws/install/vtol_testbench:/home/asambhav/vtol_ws/install/vtol_plant:/home/asambhav/vtol_ws/install/vtol_planner:/home/asambhav/vtol_ws/install/vtol_dynamics:/home/asambhav/vtol_ws/install/vtol_controller:/home/asambhav/e-yantra_ws/install/task_1:/opt/ros/humble /usr/bin/cmake --install /home/asambhav/vtol_ws/build/vtol_description
+[0.991s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/asambhav/vtol_ws/build/vtol_gazebo_plugins' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asambhav/vtol_ws/install/vtol_testbench:/home/asambhav/vtol_ws/install/vtol_plant:/home/asambhav/vtol_ws/install/vtol_planner:/home/asambhav/vtol_ws/install/vtol_dynamics:/home/asambhav/vtol_ws/install/vtol_controller:/home/asambhav/e-yantra_ws/install/task_1:/opt/ros/humble /usr/bin/cmake --build /home/asambhav/vtol_ws/build/vtol_gazebo_plugins -- -j18 -l18
+[0.992s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/asambhav/vtol_ws/build/vtol_gazebo_plugins': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asambhav/vtol_ws/install/vtol_testbench:/home/asambhav/vtol_ws/install/vtol_plant:/home/asambhav/vtol_ws/install/vtol_planner:/home/asambhav/vtol_ws/install/vtol_dynamics:/home/asambhav/vtol_ws/install/vtol_controller:/home/asambhav/e-yantra_ws/install/task_1:/opt/ros/humble /usr/bin/cmake --install /home/asambhav/vtol_ws/build/vtol_gazebo_plugins
+[1.000s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vtol_description)
+[1.003s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/asambhav/vtol_ws/build/vtol_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asambhav/vtol_ws/install/vtol_testbench:/home/asambhav/vtol_ws/install/vtol_plant:/home/asambhav/vtol_ws/install/vtol_planner:/home/asambhav/vtol_ws/install/vtol_dynamics:/home/asambhav/vtol_ws/install/vtol_controller:/home/asambhav/e-yantra_ws/install/task_1:/opt/ros/humble /usr/bin/cmake --install /home/asambhav/vtol_ws/build/vtol_description
+[1.006s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_description' for CMake module files
+[1.007s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_description' for CMake config files
+[1.007s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_description', 'cmake_prefix_path')
+[1.007s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/hook/cmake_prefix_path.ps1'
+[1.008s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/hook/cmake_prefix_path.dsv'
+[1.008s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/hook/cmake_prefix_path.sh'
+[1.009s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_description/bin'
+[1.009s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_description/lib/pkgconfig/vtol_description.pc'
+[1.009s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_description/lib/python3.10/site-packages'
+[1.009s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_description/bin'
+[1.010s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/package.ps1'
+[1.011s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/package.dsv'
+[1.012s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/package.sh'
+[1.013s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/package.bash'
+[1.013s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/package.zsh'
+[1.014s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/asambhav/vtol_ws/install/vtol_description/share/colcon-core/packages/vtol_description)
+[1.015s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vtol_description)
+[1.015s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_description' for CMake module files
+[1.015s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_description' for CMake config files
+[1.016s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_description', 'cmake_prefix_path')
+[1.016s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/hook/cmake_prefix_path.ps1'
+[1.016s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/hook/cmake_prefix_path.dsv'
+[1.017s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/hook/cmake_prefix_path.sh'
+[1.017s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_description/bin'
+[1.017s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_description/lib/pkgconfig/vtol_description.pc'
+[1.017s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_description/lib/python3.10/site-packages'
+[1.018s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_description/bin'
+[1.018s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/package.ps1'
+[1.019s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/package.dsv'
+[1.019s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/package.sh'
+[1.020s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/package.bash'
+[1.020s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_description/share/vtol_description/package.zsh'
+[1.021s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/asambhav/vtol_ws/install/vtol_description/share/colcon-core/packages/vtol_description)
+[1.022s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vtol_gazebo_plugins)
+[1.022s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins' for CMake module files
+[1.023s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins' for CMake config files
+[1.023s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/asambhav/vtol_ws/build/vtol_gazebo_plugins' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asambhav/vtol_ws/install/vtol_testbench:/home/asambhav/vtol_ws/install/vtol_plant:/home/asambhav/vtol_ws/install/vtol_planner:/home/asambhav/vtol_ws/install/vtol_dynamics:/home/asambhav/vtol_ws/install/vtol_controller:/home/asambhav/e-yantra_ws/install/task_1:/opt/ros/humble /usr/bin/cmake --install /home/asambhav/vtol_ws/build/vtol_gazebo_plugins
+[1.023s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_gazebo_plugins', 'cmake_prefix_path')
+[1.024s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/hook/cmake_prefix_path.ps1'
+[1.024s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/hook/cmake_prefix_path.dsv'
+[1.025s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/hook/cmake_prefix_path.sh'
+[1.025s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/lib'
+[1.025s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_gazebo_plugins', 'ld_library_path_lib')
+[1.026s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/hook/ld_library_path_lib.ps1'
+[1.026s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/hook/ld_library_path_lib.dsv'
+[1.027s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/hook/ld_library_path_lib.sh'
+[1.027s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/bin'
+[1.027s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/lib/pkgconfig/vtol_gazebo_plugins.pc'
+[1.027s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/lib/python3.10/site-packages'
+[1.028s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/bin'
+[1.028s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/package.ps1'
+[1.029s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/package.dsv'
+[1.029s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/package.sh'
+[1.030s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/package.bash'
+[1.030s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/package.zsh'
+[1.031s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/colcon-core/packages/vtol_gazebo_plugins)
+[1.031s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vtol_gazebo_plugins)
+[1.031s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins' for CMake module files
+[1.032s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins' for CMake config files
+[1.032s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_gazebo_plugins', 'cmake_prefix_path')
+[1.032s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/hook/cmake_prefix_path.ps1'
+[1.033s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/hook/cmake_prefix_path.dsv'
+[1.033s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/hook/cmake_prefix_path.sh'
+[1.034s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/lib'
+[1.034s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_gazebo_plugins', 'ld_library_path_lib')
+[1.034s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/hook/ld_library_path_lib.ps1'
+[1.034s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/hook/ld_library_path_lib.dsv'
+[1.035s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/hook/ld_library_path_lib.sh'
+[1.035s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/bin'
+[1.035s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/lib/pkgconfig/vtol_gazebo_plugins.pc'
+[1.035s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/lib/python3.10/site-packages'
+[1.036s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/bin'
+[1.036s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/package.ps1'
+[1.037s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/package.dsv'
+[1.037s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/package.sh'
+[1.038s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/package.bash'
+[1.038s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/vtol_gazebo_plugins/package.zsh'
+[1.039s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/asambhav/vtol_ws/install/vtol_gazebo_plugins/share/colcon-core/packages/vtol_gazebo_plugins)
+[1.340s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/asambhav/vtol_ws/src/vtol_planner': PYTHONPATH=/home/asambhav/vtol_ws/build/vtol_planner/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/vtol_planner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_planner build --build-base /home/asambhav/vtol_ws/build/vtol_planner/build install --record /home/asambhav/vtol_ws/build/vtol_planner/install.log --single-version-externally-managed install_data
+[1.352s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/asambhav/vtol_ws/src/vtol_controller': PYTHONPATH=/home/asambhav/vtol_ws/build/vtol_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_controller build --build-base /home/asambhav/vtol_ws/build/vtol_controller/build install --record /home/asambhav/vtol_ws/build/vtol_controller/install.log --single-version-externally-managed install_data
+[1.367s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/asambhav/vtol_ws/src/vtol_dynamics': PYTHONPATH=/home/asambhav/vtol_ws/build/vtol_dynamics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/vtol_dynamics/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_dynamics build --build-base /home/asambhav/vtol_ws/build/vtol_dynamics/build install --record /home/asambhav/vtol_ws/build/vtol_dynamics/install.log --single-version-externally-managed install_data
+[1.398s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/asambhav/vtol_ws/src/vtol_plant': PYTHONPATH=/home/asambhav/vtol_ws/build/vtol_plant/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/vtol_plant/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_plant build --build-base /home/asambhav/vtol_ws/build/vtol_plant/build install --record /home/asambhav/vtol_ws/build/vtol_plant/install.log --single-version-externally-managed install_data
+[1.428s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/asambhav/vtol_ws/src/vtol_testbench': PYTHONPATH=/home/asambhav/vtol_ws/build/vtol_testbench/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/vtol_testbench/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_testbench build --build-base /home/asambhav/vtol_ws/build/vtol_testbench/build install --record /home/asambhav/vtol_ws/build/vtol_testbench/install.log --single-version-externally-managed install_data
+[1.609s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_planner' for CMake module files
+[1.610s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/asambhav/vtol_ws/src/vtol_planner' returned '0': PYTHONPATH=/home/asambhav/vtol_ws/build/vtol_planner/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/vtol_planner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_planner build --build-base /home/asambhav/vtol_ws/build/vtol_planner/build install --record /home/asambhav/vtol_ws/build/vtol_planner/install.log --single-version-externally-managed install_data
+[1.610s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_planner' for CMake config files
+[1.611s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_planner/lib'
+[1.611s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_planner/bin'
+[1.611s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_planner/lib/pkgconfig/vtol_planner.pc'
+[1.611s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_planner/lib/python3.10/site-packages'
+[1.611s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_planner', 'pythonpath')
+[1.611s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_planner/share/vtol_planner/hook/pythonpath.ps1'
+[1.611s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asambhav/vtol_ws/install/vtol_planner/share/vtol_planner/hook/pythonpath.dsv'
+[1.611s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_planner/share/vtol_planner/hook/pythonpath.sh'
+[1.612s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_planner/bin'
+[1.612s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vtol_planner)
+[1.612s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_planner/share/vtol_planner/package.ps1'
+[1.612s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/asambhav/vtol_ws/install/vtol_planner/share/vtol_planner/package.dsv'
+[1.613s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_planner/share/vtol_planner/package.sh'
+[1.613s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_planner/share/vtol_planner/package.bash'
+[1.613s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_planner/share/vtol_planner/package.zsh'
+[1.613s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/asambhav/vtol_ws/install/vtol_planner/share/colcon-core/packages/vtol_planner)
+[1.637s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_dynamics' for CMake module files
+[1.637s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/asambhav/vtol_ws/src/vtol_dynamics' returned '0': PYTHONPATH=/home/asambhav/vtol_ws/build/vtol_dynamics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/vtol_dynamics/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_dynamics build --build-base /home/asambhav/vtol_ws/build/vtol_dynamics/build install --record /home/asambhav/vtol_ws/build/vtol_dynamics/install.log --single-version-externally-managed install_data
+[1.637s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_dynamics' for CMake config files
+[1.638s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_dynamics/lib'
+[1.638s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_dynamics/bin'
+[1.638s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_dynamics/lib/pkgconfig/vtol_dynamics.pc'
+[1.638s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_dynamics/lib/python3.10/site-packages'
+[1.638s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_dynamics', 'pythonpath')
+[1.639s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_dynamics/share/vtol_dynamics/hook/pythonpath.ps1'
+[1.639s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asambhav/vtol_ws/install/vtol_dynamics/share/vtol_dynamics/hook/pythonpath.dsv'
+[1.640s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_dynamics/share/vtol_dynamics/hook/pythonpath.sh'
+[1.641s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_dynamics/bin'
+[1.641s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vtol_dynamics)
+[1.641s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_dynamics/share/vtol_dynamics/package.ps1'
+[1.643s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/asambhav/vtol_ws/install/vtol_dynamics/share/vtol_dynamics/package.dsv'
+[1.643s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_dynamics/share/vtol_dynamics/package.sh'
+[1.643s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_dynamics/share/vtol_dynamics/package.bash'
+[1.643s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_dynamics/share/vtol_dynamics/package.zsh'
+[1.644s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/asambhav/vtol_ws/install/vtol_dynamics/share/colcon-core/packages/vtol_dynamics)
+[1.656s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_controller' for CMake module files
+[1.657s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/asambhav/vtol_ws/src/vtol_controller' returned '0': PYTHONPATH=/home/asambhav/vtol_ws/build/vtol_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_controller build --build-base /home/asambhav/vtol_ws/build/vtol_controller/build install --record /home/asambhav/vtol_ws/build/vtol_controller/install.log --single-version-externally-managed install_data
+[1.657s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_controller' for CMake config files
+[1.658s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_controller/lib'
+[1.658s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_controller/bin'
+[1.658s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_controller/lib/pkgconfig/vtol_controller.pc'
+[1.658s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_controller/lib/python3.10/site-packages'
+[1.658s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_controller', 'pythonpath')
+[1.659s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller/hook/pythonpath.ps1'
+[1.659s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller/hook/pythonpath.dsv'
+[1.660s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller/hook/pythonpath.sh'
+[1.660s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_controller/bin'
+[1.660s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vtol_controller)
+[1.661s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller/package.ps1'
+[1.661s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller/package.dsv'
+[1.662s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller/package.sh'
+[1.662s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller/package.bash'
+[1.663s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_controller/share/vtol_controller/package.zsh'
+[1.663s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/asambhav/vtol_ws/install/vtol_controller/share/colcon-core/packages/vtol_controller)
+[1.719s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_plant' for CMake module files
+[1.720s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/asambhav/vtol_ws/src/vtol_plant' returned '0': PYTHONPATH=/home/asambhav/vtol_ws/build/vtol_plant/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/vtol_plant/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_plant build --build-base /home/asambhav/vtol_ws/build/vtol_plant/build install --record /home/asambhav/vtol_ws/build/vtol_plant/install.log --single-version-externally-managed install_data
+[1.720s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_plant' for CMake config files
+[1.721s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_plant/lib'
+[1.721s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_plant/bin'
+[1.721s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_plant/lib/pkgconfig/vtol_plant.pc'
+[1.722s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_plant/lib/python3.10/site-packages'
+[1.722s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_plant', 'pythonpath')
+[1.722s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_plant/share/vtol_plant/hook/pythonpath.ps1'
+[1.722s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asambhav/vtol_ws/install/vtol_plant/share/vtol_plant/hook/pythonpath.dsv'
+[1.723s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_plant/share/vtol_plant/hook/pythonpath.sh'
+[1.723s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_plant/bin'
+[1.723s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vtol_plant)
+[1.723s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_plant/share/vtol_plant/package.ps1'
+[1.724s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/asambhav/vtol_ws/install/vtol_plant/share/vtol_plant/package.dsv'
+[1.724s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_plant/share/vtol_plant/package.sh'
+[1.724s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_plant/share/vtol_plant/package.bash'
+[1.724s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_plant/share/vtol_plant/package.zsh'
+[1.724s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/asambhav/vtol_ws/install/vtol_plant/share/colcon-core/packages/vtol_plant)
+[1.758s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_testbench' for CMake module files
+[1.759s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/asambhav/vtol_ws/src/vtol_testbench' returned '0': PYTHONPATH=/home/asambhav/vtol_ws/build/vtol_testbench/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/vtol_testbench/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_testbench build --build-base /home/asambhav/vtol_ws/build/vtol_testbench/build install --record /home/asambhav/vtol_ws/build/vtol_testbench/install.log --single-version-externally-managed install_data
+[1.759s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_testbench' for CMake config files
+[1.761s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_testbench/lib'
+[1.761s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_testbench/bin'
+[1.761s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_testbench/lib/pkgconfig/vtol_testbench.pc'
+[1.762s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_testbench/lib/python3.10/site-packages'
+[1.762s] Level 1:colcon.colcon_core.shell:create_environment_hook('vtol_testbench', 'pythonpath')
+[1.762s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_testbench/share/vtol_testbench/hook/pythonpath.ps1'
+[1.763s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asambhav/vtol_ws/install/vtol_testbench/share/vtol_testbench/hook/pythonpath.dsv'
+[1.763s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asambhav/vtol_ws/install/vtol_testbench/share/vtol_testbench/hook/pythonpath.sh'
+[1.764s] Level 1:colcon.colcon_core.environment:checking '/home/asambhav/vtol_ws/install/vtol_testbench/bin'
+[1.764s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vtol_testbench)
+[1.764s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_testbench/share/vtol_testbench/package.ps1'
+[1.765s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/asambhav/vtol_ws/install/vtol_testbench/share/vtol_testbench/package.dsv'
+[1.766s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_testbench/share/vtol_testbench/package.sh'
+[1.766s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_testbench/share/vtol_testbench/package.bash'
+[1.766s] INFO:colcon.colcon_core.shell:Creating package script '/home/asambhav/vtol_ws/install/vtol_testbench/share/vtol_testbench/package.zsh'
+[1.767s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/asambhav/vtol_ws/install/vtol_testbench/share/colcon-core/packages/vtol_testbench)
+[1.767s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.767s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.768s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.768s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.775s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.775s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.775s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.786s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.786s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/asambhav/vtol_ws/install/local_setup.ps1'
+[1.787s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/asambhav/vtol_ws/install/_local_setup_util_ps1.py'
+[1.789s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/asambhav/vtol_ws/install/setup.ps1'
+[1.790s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/asambhav/vtol_ws/install/local_setup.sh'
+[1.791s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/asambhav/vtol_ws/install/_local_setup_util_sh.py'
+[1.791s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/asambhav/vtol_ws/install/setup.sh'
+[1.792s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/asambhav/vtol_ws/install/local_setup.bash'
+[1.792s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/asambhav/vtol_ws/install/setup.bash'
+[1.793s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/asambhav/vtol_ws/install/local_setup.zsh'
+[1.793s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/asambhav/vtol_ws/install/setup.zsh'

@@ -1,0 +1,2 @@
+[console_scripts]
+sensor_simulator_node = sensor_simulator.sensor_simulator_node:main

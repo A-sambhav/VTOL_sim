@@ -1,0 +1,2 @@
+[console_scripts]
+state_estimator_node = state_estimator.state_estimator_node:main

@@ -1,0 +1,31 @@
+[1.402s] Invoking command in '/home/asambhav/vtol_ws/src/sensor_simulator': PYTHONPATH=/home/asambhav/vtol_ws/build/sensor_simulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/sensor_simulator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sensor_simulator build --build-base /home/asambhav/vtol_ws/build/sensor_simulator/build install --record /home/asambhav/vtol_ws/build/sensor_simulator/install.log --single-version-externally-managed install_data
+[1.604s] running egg_info
+[1.614s] creating ../../build/sensor_simulator/sensor_simulator.egg-info
+[1.614s] writing ../../build/sensor_simulator/sensor_simulator.egg-info/PKG-INFO
+[1.615s] writing dependency_links to ../../build/sensor_simulator/sensor_simulator.egg-info/dependency_links.txt
+[1.615s] writing requirements to ../../build/sensor_simulator/sensor_simulator.egg-info/requires.txt
+[1.615s] writing top-level names to ../../build/sensor_simulator/sensor_simulator.egg-info/top_level.txt
+[1.615s] writing manifest file '../../build/sensor_simulator/sensor_simulator.egg-info/SOURCES.txt'
+[1.635s] reading manifest file '../../build/sensor_simulator/sensor_simulator.egg-info/SOURCES.txt'
+[1.636s] writing manifest file '../../build/sensor_simulator/sensor_simulator.egg-info/SOURCES.txt'
+[1.636s] running build
+[1.636s] running build_py
+[1.636s] creating /home/asambhav/vtol_ws/build/sensor_simulator/build/lib/sensor_simulator
+[1.636s] copying sensor_simulator/__init__.py -> /home/asambhav/vtol_ws/build/sensor_simulator/build/lib/sensor_simulator
+[1.636s] copying sensor_simulator/sensor_simulator_node.py -> /home/asambhav/vtol_ws/build/sensor_simulator/build/lib/sensor_simulator
+[1.636s] running install
+[1.639s] running install_lib
+[1.649s] creating /home/asambhav/vtol_ws/install/sensor_simulator/lib/python3.10/site-packages/sensor_simulator
+[1.649s] copying /home/asambhav/vtol_ws/build/sensor_simulator/build/lib/sensor_simulator/__init__.py -> /home/asambhav/vtol_ws/install/sensor_simulator/lib/python3.10/site-packages/sensor_simulator
+[1.649s] copying /home/asambhav/vtol_ws/build/sensor_simulator/build/lib/sensor_simulator/sensor_simulator_node.py -> /home/asambhav/vtol_ws/install/sensor_simulator/lib/python3.10/site-packages/sensor_simulator
+[1.649s] byte-compiling /home/asambhav/vtol_ws/install/sensor_simulator/lib/python3.10/site-packages/sensor_simulator/__init__.py to __init__.cpython-310.pyc
+[1.650s] byte-compiling /home/asambhav/vtol_ws/install/sensor_simulator/lib/python3.10/site-packages/sensor_simulator/sensor_simulator_node.py to sensor_simulator_node.cpython-310.pyc
+[1.650s] running install_data
+[1.650s] creating /home/asambhav/vtol_ws/install/sensor_simulator/share/ament_index/resource_index/packages
+[1.650s] copying resource/sensor_simulator -> /home/asambhav/vtol_ws/install/sensor_simulator/share/ament_index/resource_index/packages
+[1.650s] copying package.xml -> /home/asambhav/vtol_ws/install/sensor_simulator/share/sensor_simulator
+[1.650s] running install_egg_info
+[1.661s] Copying ../../build/sensor_simulator/sensor_simulator.egg-info to /home/asambhav/vtol_ws/install/sensor_simulator/lib/python3.10/site-packages/sensor_simulator-0.0.0-py3.10.egg-info
+[1.661s] running install_scripts
+[1.681s] writing list of installed files to '/home/asambhav/vtol_ws/build/sensor_simulator/install.log'
+[1.699s] Invoked command in '/home/asambhav/vtol_ws/src/sensor_simulator' returned '0': PYTHONPATH=/home/asambhav/vtol_ws/build/sensor_simulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws/install/sensor_simulator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sensor_simulator build --build-base /home/asambhav/vtol_ws/build/sensor_simulator/build install --record /home/asambhav/vtol_ws/build/sensor_simulator/install.log --single-version-externally-managed install_data
