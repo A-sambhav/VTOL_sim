@@ -14,6 +14,7 @@ Panels:
         - /Marker2
         - /Marker2/Topic1
         - /MarkerArray1
+        - /Marker3
       Splitter Ratio: 0.5
     Tree Height: 769
   - Class: rviz_common/Selection
@@ -165,23 +166,24 @@ Visualization Manager:
       Show Names: false
       Tree:
         map:
-          world:
-            base_link:
-              body:
-                fixed_wing_propeller:
+          {}
+        world:
+          base_link:
+            body:
+              fixed_wing_propeller:
+                {}
+              imu_link:
+                {}
+              motor3:
+                {}
+              motor4:
+                {}
+              rack_n_pinion1:
+                motor1:
                   {}
-                imu_link:
+              rack_n_pinion2:
+                motor2:
                   {}
-                motor3:
-                  {}
-                motor4:
-                  {}
-                rack_n_pinion1:
-                  motor1:
-                    {}
-                rack_n_pinion2:
-                  motor2:
-                    {}
       Update Interval: 0
       Value: true
     - Class: rviz_default_plugins/Marker
@@ -221,6 +223,19 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /trajectory_marker_array
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: Marker
+      Namespaces:
+        estimated_trajectory: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /estimated_trajectory_marker
       Value: true
   Enabled: true
   Global Options:
@@ -268,25 +283,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 98.65126037597656
+      Distance: 74.15278625488281
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: -1.2336773872375488
+        Y: 10.696442604064941
+        Z: 4.6887006759643555
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.03979763016104698
+      Pitch: 0.08479758352041245
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.13539357483386993
+      Yaw: 0.08539000898599625
     Saved: ~
 Window Geometry:
   Displays:

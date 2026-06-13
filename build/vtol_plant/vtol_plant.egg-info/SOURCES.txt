@@ -15,6 +15,7 @@ test/test_pep257.py
 vtol_plant/__init__.py
 vtol_plant/allocator.py
 vtol_plant/dynamics.py
+vtol_plant/estimated_state_visualizer.py
 vtol_plant/integrator.py
 vtol_plant/odom_tf_broadcaster.py
 vtol_plant/parameter.py

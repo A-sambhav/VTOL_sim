@@ -75,6 +75,25 @@ def generate_launch_description():
             executable='plant_node',
             output='screen'
         ),
+       # ==============================================
+        # Sensor Simulator
+        # ==============================================
+
+        Node(
+            package='sensor_simulator',
+            executable='sensor_simulator_node',
+            output='screen'
+        ),
+
+        # ==============================================
+        # State Estimator
+        # ==============================================
+
+        Node(
+            package='state_estimator',
+            executable='state_estimator_node',
+            output='screen'
+        ),
 
         # ==============================================
         # ODOM -> TF
@@ -105,6 +124,15 @@ def generate_launch_description():
             executable='state_visualizer',
             output='screen'
         ),
+        # ==============================================
+        # Estimated State Visualizer
+        # ==============================================
+
+        Node(
+            package='vtol_plant',
+            executable='estimated_state_visualizer',
+            output='screen'
+        ),
         Node(
         package='tf2_ros',
         executable='static_transform_publisher',
@@ -115,5 +143,6 @@ def generate_launch_description():
         'world'
     ]
     ),
+
 
     ])

@@ -1,0 +1,35 @@
+running egg_info
+writing ../../build/vtol_plant/vtol_plant.egg-info/PKG-INFO
+writing dependency_links to ../../build/vtol_plant/vtol_plant.egg-info/dependency_links.txt
+writing entry points to ../../build/vtol_plant/vtol_plant.egg-info/entry_points.txt
+writing requirements to ../../build/vtol_plant/vtol_plant.egg-info/requires.txt
+writing top-level names to ../../build/vtol_plant/vtol_plant.egg-info/top_level.txt
+reading manifest file '../../build/vtol_plant/vtol_plant.egg-info/SOURCES.txt'
+writing manifest file '../../build/vtol_plant/vtol_plant.egg-info/SOURCES.txt'
+running build
+running build_py
+copying vtol_plant/__init__.py -> /home/asambhav/vtol_ws_clean/build/vtol_plant/build/lib/vtol_plant
+copying vtol_plant/estimated_state_visualizer.py -> /home/asambhav/vtol_ws_clean/build/vtol_plant/build/lib/vtol_plant
+copying vtol_plant/plant_node.py -> /home/asambhav/vtol_ws_clean/build/vtol_plant/build/lib/vtol_plant
+copying vtol_plant/allocator.py -> /home/asambhav/vtol_ws_clean/build/vtol_plant/build/lib/vtol_plant
+copying vtol_plant/parameter.py -> /home/asambhav/vtol_ws_clean/build/vtol_plant/build/lib/vtol_plant
+copying vtol_plant/odom_tf_broadcaster.py -> /home/asambhav/vtol_ws_clean/build/vtol_plant/build/lib/vtol_plant
+copying vtol_plant/dynamics.py -> /home/asambhav/vtol_ws_clean/build/vtol_plant/build/lib/vtol_plant
+copying vtol_plant/state_visualizer.py -> /home/asambhav/vtol_ws_clean/build/vtol_plant/build/lib/vtol_plant
+copying vtol_plant/integrator.py -> /home/asambhav/vtol_ws_clean/build/vtol_plant/build/lib/vtol_plant
+running install
+running install_lib
+copying /home/asambhav/vtol_ws_clean/build/vtol_plant/build/lib/vtol_plant/estimated_state_visualizer.py -> /home/asambhav/vtol_ws_clean/install/vtol_plant/lib/python3.10/site-packages/vtol_plant
+byte-compiling /home/asambhav/vtol_ws_clean/install/vtol_plant/lib/python3.10/site-packages/vtol_plant/estimated_state_visualizer.py to estimated_state_visualizer.cpython-310.pyc
+running install_data
+copying resource/vtol_plant -> /home/asambhav/vtol_ws_clean/install/vtol_plant/share/ament_index/resource_index/packages
+copying package.xml -> /home/asambhav/vtol_ws_clean/install/vtol_plant/share/vtol_plant
+running install_egg_info
+removing '/home/asambhav/vtol_ws_clean/install/vtol_plant/lib/python3.10/site-packages/vtol_plant-0.0.1-py3.10.egg-info' (and everything under it)
+Copying ../../build/vtol_plant/vtol_plant.egg-info to /home/asambhav/vtol_ws_clean/install/vtol_plant/lib/python3.10/site-packages/vtol_plant-0.0.1-py3.10.egg-info
+running install_scripts
+Installing estimated_state_visualizer script to /home/asambhav/vtol_ws_clean/install/vtol_plant/lib/vtol_plant
+Installing odom_tf_broadcaster script to /home/asambhav/vtol_ws_clean/install/vtol_plant/lib/vtol_plant
+Installing plant_node script to /home/asambhav/vtol_ws_clean/install/vtol_plant/lib/vtol_plant
+Installing state_visualizer script to /home/asambhav/vtol_ws_clean/install/vtol_plant/lib/vtol_plant
+writing list of installed files to '/home/asambhav/vtol_ws_clean/build/vtol_plant/install.log'

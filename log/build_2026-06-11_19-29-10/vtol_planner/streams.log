@@ -1,0 +1,32 @@
+[1.676s] Invoking command in '/home/asambhav/vtol_ws_clean/src/vtol_planner': PYTHONPATH=/home/asambhav/vtol_ws_clean/build/vtol_planner/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws_clean/install/vtol_planner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_planner build --build-base /home/asambhav/vtol_ws_clean/build/vtol_planner/build install --record /home/asambhav/vtol_ws_clean/build/vtol_planner/install.log --single-version-externally-managed install_data
+[1.964s] running egg_info
+[1.982s] writing ../../build/vtol_planner/vtol_planner.egg-info/PKG-INFO
+[1.983s] writing dependency_links to ../../build/vtol_planner/vtol_planner.egg-info/dependency_links.txt
+[1.983s] writing entry points to ../../build/vtol_planner/vtol_planner.egg-info/entry_points.txt
+[1.983s] writing requirements to ../../build/vtol_planner/vtol_planner.egg-info/requires.txt
+[1.983s] writing top-level names to ../../build/vtol_planner/vtol_planner.egg-info/top_level.txt
+[2.018s] reading manifest file '../../build/vtol_planner/vtol_planner.egg-info/SOURCES.txt'
+[2.019s] writing manifest file '../../build/vtol_planner/vtol_planner.egg-info/SOURCES.txt'
+[2.019s] running build
+[2.019s] running build_py
+[2.019s] copying vtol_planner/planner_node.py -> /home/asambhav/vtol_ws_clean/build/vtol_planner/build/lib/vtol_planner
+[2.019s] copying vtol_planner/__init__.py -> /home/asambhav/vtol_ws_clean/build/vtol_planner/build/lib/vtol_planner
+[2.019s] copying vtol_planner/transition_trajectory.py -> /home/asambhav/vtol_ws_clean/build/vtol_planner/build/lib/vtol_planner
+[2.019s] copying vtol_planner/trajectory_visualizer.py -> /home/asambhav/vtol_ws_clean/build/vtol_planner/build/lib/vtol_planner
+[2.019s] copying vtol_planner/circle_trajectory.py -> /home/asambhav/vtol_ws_clean/build/vtol_planner/build/lib/vtol_planner
+[2.020s] running install
+[2.023s] running install_lib
+[2.034s] running install_data
+[2.034s] copying resource/vtol_planner -> /home/asambhav/vtol_ws_clean/install/vtol_planner/share/ament_index/resource_index/packages
+[2.034s] copying package.xml -> /home/asambhav/vtol_ws_clean/install/vtol_planner/share/vtol_planner
+[2.034s] copying launch/vtol_sim.launch.py -> /home/asambhav/vtol_ws_clean/install/vtol_planner/share/vtol_planner/launch
+[2.034s] copying launch/planner.launch.py -> /home/asambhav/vtol_ws_clean/install/vtol_planner/share/vtol_planner/launch
+[2.034s] copying rviz/planner.rviz -> /home/asambhav/vtol_ws_clean/install/vtol_planner/share/vtol_planner/rviz
+[2.034s] running install_egg_info
+[2.046s] removing '/home/asambhav/vtol_ws_clean/install/vtol_planner/lib/python3.10/site-packages/vtol_planner-0.0.0-py3.10.egg-info' (and everything under it)
+[2.046s] Copying ../../build/vtol_planner/vtol_planner.egg-info to /home/asambhav/vtol_ws_clean/install/vtol_planner/lib/python3.10/site-packages/vtol_planner-0.0.0-py3.10.egg-info
+[2.046s] running install_scripts
+[2.070s] Installing planner_node script to /home/asambhav/vtol_ws_clean/install/vtol_planner/lib/vtol_planner
+[2.070s] Installing trajectory_visualizer script to /home/asambhav/vtol_ws_clean/install/vtol_planner/lib/vtol_planner
+[2.070s] writing list of installed files to '/home/asambhav/vtol_ws_clean/build/vtol_planner/install.log'
+[2.087s] Invoked command in '/home/asambhav/vtol_ws_clean/src/vtol_planner' returned '0': PYTHONPATH=/home/asambhav/vtol_ws_clean/build/vtol_planner/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/vtol_ws_clean/install/vtol_planner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vtol_planner build --build-base /home/asambhav/vtol_ws_clean/build/vtol_planner/build install --record /home/asambhav/vtol_ws_clean/build/vtol_planner/install.log --single-version-externally-managed install_data
