@@ -166,24 +166,23 @@ Visualization Manager:
       Show Names: false
       Tree:
         map:
-          {}
-        world:
-          base_link:
-            body:
-              fixed_wing_propeller:
-                {}
-              imu_link:
-                {}
-              motor3:
-                {}
-              motor4:
-                {}
-              rack_n_pinion1:
-                motor1:
+          world:
+            base_link:
+              body:
+                fixed_wing_propeller:
                   {}
-              rack_n_pinion2:
-                motor2:
+                imu_link:
                   {}
+                motor3:
+                  {}
+                motor4:
+                  {}
+                rack_n_pinion1:
+                  motor1:
+                    {}
+                rack_n_pinion2:
+                  motor2:
+                    {}
       Update Interval: 0
       Value: true
     - Class: rviz_default_plugins/Marker
@@ -283,25 +282,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 74.15278625488281
+      Distance: 86.57530212402344
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -1.2336773872375488
-        Y: 10.696442604064941
-        Z: 4.6887006759643555
+        X: -0.1827601194381714
+        Y: -0.46668052673339844
+        Z: -0.06159326434135437
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.08479758352041245
+      Pitch: 0.028772566467523575
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.08539000898599625
+      Yaw: 0.07415229827165604
     Saved: ~
 Window Geometry:
   Displays:

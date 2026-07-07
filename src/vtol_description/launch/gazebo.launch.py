@@ -1,3 +1,11 @@
+# ==========================================================
+# VTOL Flight Control System
+#
+# Copyright (c) 2026 Asambhav
+#
+# Licensed under the Apache License, Version 2.0
+# See LICENSE file for details.
+# ==========================================================
 import os
 from os import pathsep
 from pathlib import Path

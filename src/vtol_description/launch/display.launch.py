@@ -1,3 +1,11 @@
+# ==========================================================
+# VTOL Flight Control System
+#
+# Copyright (c) 2026 Asambhav
+#
+# Licensed under the Apache License, Version 2.0
+# See LICENSE file for details.
+# ==========================================================
 import os
 
 from ament_index_python.packages import get_package_share_directory
