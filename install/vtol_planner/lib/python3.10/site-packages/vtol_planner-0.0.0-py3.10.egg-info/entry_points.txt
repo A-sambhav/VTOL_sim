@@ -1,3 +1,0 @@
-[console_scripts]
-planner_node = vtol_planner.planner_node:main
-trajectory_visualizer = vtol_planner.trajectory_visualizer:main
